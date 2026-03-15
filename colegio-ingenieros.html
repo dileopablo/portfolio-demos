@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>Colegio de Ingenieros Agrónomos de Reconquista | Santa Fe</title>
+<meta name="description" content="Colegio de Ingenieros Agrónomos del Norte de Santa Fe. Matrícula profesional, servicios al matriculado, noticias y agenda del sector agropecuario.">
+<meta name="keywords" content="ingenieros agrónomos Reconquista, matrícula agronomía Santa Fe, colegio profesional norte Santa Fe, agronomía Reconquista">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.ciarsf.org.ar/">
+<meta property="og:title" content="Colegio de Ingenieros Agrónomos de Reconquista">
+<meta property="og:description" content="Institución profesional que nuclea a los ingenieros agrónomos del norte de Santa Fe.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Colegio de Ingenieros Agrónomos de Reconquista",
+  "description": "Institución que nuclea y representa a los ingenieros agrónomos del norte de Santa Fe.",
+  "url": "https://www.ciarsf.org.ar",
+  "telephone": "+54-3482-44XXXX",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rivadavia 540",
+    "addressLocality": "Reconquista",
+    "addressRegion": "Santa Fe",
+    "postalCode": "3560",
+    "addressCountry": "AR"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00", "closes": "18:00"
+  }]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --verde: #1a4a2e;
+  --verde-medio: #2d7a4f;
+  --verde-claro: #3dab6e;
+  --verde-suave: #e8f5ee;
+  --tierra: #8b6914;
+  --tierra-claro: #f5ede0;
+  --negro: #0c0f0a;
+  --blanco: #f4f6f2;
+  --fondo: #f0f4ee;
+  --texto: #1a2018;
+  --texto-suave: #4a5a48;
+  --borde: #d0dccb;
+  --display: 'Space Grotesk', sans-serif;
+  --mono: 'Space Mono', monospace;
+  --pad: clamp(20px, 5vw, 60px);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--blanco); color: var(--texto); font-family: var(--display); font-weight: 400; overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(10,15,10,0.95); backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(61,171,110,0.2);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--pad); height: 62px;
+}
+
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-icono {
+  width: 36px; height: 36px; background: var(--verde-claro);
+  border-radius: 6px; display: flex; align-items: center;
+  justify-content: center; font-size: 18px;
+}
+.nav-logo-texto { display: flex; flex-direction: column; }
+.nav-logo-sigla { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--verde-claro); letter-spacing: 2px; line-height: 1; }
+.nav-logo-sub { font-size: 9px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color .2s; }
+.nav-links a:hover { color: var(--verde-claro); }
+.nav-cta { background: var(--verde-claro) !important; color: var(--negro) !important; padding: 8px 20px; border-radius: 4px; font-weight: 600 !important; }
+.nav-cta:hover { background: #4dc880 !important; }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--blanco); transition: all .3s; }
+
+.mobile-menu {
+  display: none; position: fixed; top: 62px; left: 0; right: 0; z-index: 199;
+  background: rgba(10,15,10,0.98); backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(61,171,110,0.2);
+  padding: 20px var(--pad) 28px; flex-direction: column;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.06); transition: color .2s; }
+.mobile-menu a:last-child { border-bottom: none; color: var(--verde-claro); margin-top: 6px; }
+.mobile-menu a:hover { color: #fff; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100svh; padding-top: 62px;
+  background: var(--negro); position: relative; overflow: hidden;
+  display: flex; align-items: center;
+}
+
+/* Grid de fondo tecnológico */
+.hero-grid {
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(61,171,110,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61,171,110,0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.hero-glow {
+  position: absolute; top: 20%; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 400px;
+  background: radial-gradient(ellipse, rgba(45,122,79,0.2) 0%, transparent 70%);
+  z-index: 0; pointer-events: none;
+}
+
+.hero-contenido {
+  position: relative; z-index: 1;
+  max-width: 860px; margin: 0 auto; padding: 80px var(--pad);
+  text-align: center;
+}
+
+.hero-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(61,171,110,0.1); border: 1px solid rgba(61,171,110,0.3);
+  color: var(--verde-claro); padding: 6px 16px; border-radius: 100px;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; margin-bottom: 32px;
+}
+.hero-chip::before { content: '●'; font-size: 7px; animation: pulso 2s infinite; }
+@keyframes pulso { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+.hero-titulo {
+  font-size: clamp(36px, 5.5vw, 72px); font-weight: 700;
+  line-height: 1.05; color: var(--blanco); margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.hero-titulo .verde { color: var(--verde-claro); }
+.hero-titulo .linea-mono { font-family: var(--mono); font-size: 0.85em; color: rgba(255,255,255,0.3); display: block; font-weight: 400; letter-spacing: 2px; font-size: clamp(12px, 1.5vw, 18px); margin-bottom: 8px; }
+
+.hero-desc {
+  font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.5);
+  max-width: 560px; margin: 0 auto 40px; font-weight: 300;
+}
+
+.hero-btns { display: flex; gap: 14px; align-items: center; justify-content: center; flex-wrap: wrap; }
+
+.btn-primary {
+  background: var(--verde-claro); color: var(--negro);
+  padding: 13px 28px; border-radius: 4px; font-family: var(--display);
+  font-size: 13px; font-weight: 600; letter-spacing: .5px;
+  text-decoration: none; border: none; cursor: pointer;
+  transition: background .2s, transform .15s; display: inline-block;
+}
+.btn-primary:hover { background: #4dc880; transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent; color: var(--blanco);
+  padding: 13px 28px; border-radius: 4px; font-family: var(--display);
+  font-size: 13px; font-weight: 500; letter-spacing: .5px;
+  text-decoration: none; border: 1px solid rgba(255,255,255,0.15);
+  transition: all .2s; display: inline-block;
+}
+.btn-outline:hover { border-color: var(--verde-claro); color: var(--verde-claro); }
+
+/* ── STATS BAR ── */
+.stats-bar {
+  background: var(--verde); display: grid;
+  grid-template-columns: repeat(4,1fr);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.stat-item { padding: 28px var(--pad); border-right: 1px solid rgba(255,255,255,0.1); text-align: center; }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: var(--mono); font-size: clamp(28px,3.5vw,44px); font-weight: 700; color: #7ee8a2; line-height: 1; margin-bottom: 4px; }
+.stat-label { font-size: 11px; color: rgba(255,255,255,0.55); letter-spacing: 1.5px; text-transform: uppercase; }
+
+/* ── SECCIONES ── */
+.seccion { padding: 88px var(--pad); }
+.seccion.fondo { background: var(--fondo); }
+.seccion.oscura { background: var(--negro); }
+
+.sec-eyebrow { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--verde-medio); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.sec-eyebrow::before { content: '//'; color: var(--verde-claro); }
+
+.sec-titulo { font-size: clamp(28px,4vw,48px); font-weight: 700; color: var(--texto); line-height: 1.1; margin-bottom: 14px; letter-spacing: -.5px; }
+.sec-titulo.claro { color: var(--blanco); }
+
+.sec-desc { font-size: 15px; color: var(--texto-suave); line-height: 1.7; max-width: 540px; margin-bottom: 48px; font-weight: 300; }
+.sec-desc.claro { color: rgba(255,255,255,0.5); }
+
+.sec-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 16px; }
+.sec-link { font-family: var(--mono); font-size: 11px; color: var(--verde-claro); text-decoration: none; display: flex; align-items: center; gap: 6px; letter-spacing: 1px; transition: gap .2s; }
+.sec-link:hover { gap: 12px; }
+.sec-link::after { content: '→'; }
+
+/* ── NOTICIAS ── */
+.noticias-grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr; gap: 16px; }
+
+.noticia-card {
+  background: var(--blanco); border: 1px solid var(--borde);
+  border-radius: 10px; overflow: hidden; cursor: pointer;
+  transition: all .2s; display: flex; flex-direction: column;
+}
+.noticia-card:hover { box-shadow: 0 8px 28px rgba(26,74,46,0.12); transform: translateY(-2px); border-color: var(--verde-claro); }
+
+.noticia-card.principal { grid-row: span 2; }
+
+.noticia-imagen {
+  background: var(--verde-suave); height: 180px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 52px; position: relative; overflow: hidden;
+  flex-shrink: 0;
+}
+.noticia-card.principal .noticia-imagen { height: 240px; }
+.noticia-imagen::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,74,46,0.08) 0%, transparent 60%); }
+.noticia-imagen span { position: relative; z-index: 1; }
+
+.noticia-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+.noticia-tag {
+  display: inline-block; font-family: var(--mono); font-size: 9px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; padding: 3px 10px;
+  border-radius: 100px; margin-bottom: 10px; width: fit-content;
+}
+.tag-verde { background: var(--verde-suave); color: var(--verde-medio); }
+.tag-tierra { background: var(--tierra-claro); color: var(--tierra); }
+.tag-gris { background: #f0f0f0; color: #666; }
+
+.noticia-titulo { font-size: 16px; font-weight: 600; color: var(--texto); line-height: 1.3; margin-bottom: 8px; flex: 1; }
+.noticia-card.principal .noticia-titulo { font-size: 20px; }
+.noticia-fecha { font-family: var(--mono); font-size: 10px; color: var(--texto-suave); letter-spacing: 1px; }
+
+/* ── SERVICIOS ── */
+.servicios-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+
+.servicio-card {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(61,171,110,0.15);
+  border-radius: 10px; padding: 28px; cursor: pointer;
+  transition: all .2s; position: relative; overflow: hidden;
+}
+.servicio-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--verde-claro); transform: scaleX(0); transform-origin: left;
+  transition: transform .3s;
+}
+.servicio-card:hover { background: rgba(61,171,110,0.06); border-color: rgba(61,171,110,0.4); }
+.servicio-card:hover::before { transform: scaleX(1); }
+
+.servicio-icono { font-size: 28px; margin-bottom: 14px; display: block; }
+.servicio-nombre { font-size: 16px; font-weight: 600; color: var(--blanco); margin-bottom: 8px; }
+.servicio-desc { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; font-weight: 300; }
+
+/* ── MATRÍCULA ── */
+.matricula { display: grid; grid-template-columns: 1fr 1fr; }
+
+.matricula-info {
+  padding: 88px var(--pad); background: var(--verde);
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.matricula-info::before {
+  content: 'ING\AGRO'; position: absolute; right: -20px; bottom: -20px;
+  font-family: var(--mono); font-size: 80px; font-weight: 700;
+  color: rgba(255,255,255,0.04); line-height: 1; pointer-events: none;
+  white-space: pre;
+}
+
+.matricula-info .sec-eyebrow { color: #7ee8a2; }
+.matricula-info .sec-eyebrow::before { color: #7ee8a2; }
+.matricula-info .sec-titulo { color: var(--blanco); }
+.matricula-desc { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.6); margin: 16px 0 32px; max-width: 400px; font-weight: 300; }
+
+.requisitos { display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+.req-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: rgba(255,255,255,0.75); }
+.req-check { color: #7ee8a2; font-weight: 700; flex-shrink: 0; margin-top: 1px; font-family: var(--mono); }
+
+.matricula-form {
+  padding: 88px var(--pad); background: var(--fondo);
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.form-titulo { font-size: 26px; font-weight: 700; color: var(--texto); margin-bottom: 8px; letter-spacing: -.5px; }
+.form-sub { font-size: 13px; color: var(--texto-suave); margin-bottom: 28px; font-weight: 300; }
+
+.form-grupo { margin-bottom: 14px; }
+.form-grupo label { display: block; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--texto-suave); margin-bottom: 7px; }
+.form-grupo input, .form-grupo select, .form-grupo textarea {
+  width: 100%; background: var(--blanco); border: 1.5px solid var(--borde);
+  border-radius: 6px; padding: 11px 14px; color: var(--texto);
+  font-family: var(--display); font-size: 14px; outline: none;
+  transition: border-color .2s; -webkit-appearance: none;
+}
+.form-grupo input:focus, .form-grupo select:focus, .form-grupo textarea:focus { border-color: var(--verde-claro); }
+.form-grupo select option { background: var(--blanco); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.btn-form {
+  width: 100%; background: var(--verde); color: var(--blanco);
+  border: none; padding: 14px; border-radius: 6px; font-family: var(--display);
+  font-size: 13px; font-weight: 600; letter-spacing: .5px;
+  cursor: pointer; margin-top: 6px; transition: background .2s;
+}
+.btn-form:hover { background: var(--verde-medio); }
+
+/* ── AGENDA ── */
+.agenda-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+
+.evento-card {
+  background: var(--blanco); border: 1px solid var(--borde);
+  border-radius: 10px; padding: 20px; display: flex; gap: 16px;
+  align-items: flex-start; cursor: pointer; transition: all .2s;
+}
+.evento-card:hover { border-color: var(--verde-claro); box-shadow: 0 4px 16px rgba(26,74,46,0.08); }
+
+.evento-fecha {
+  background: var(--verde); color: var(--blanco);
+  border-radius: 8px; padding: 10px 12px; text-align: center;
+  flex-shrink: 0; min-width: 52px;
+}
+.evento-dia { font-family: var(--mono); font-size: 22px; font-weight: 700; line-height: 1; }
+.evento-mes { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 2px; }
+
+.evento-info { flex: 1; }
+.evento-tipo { font-family: var(--mono); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--verde-medio); margin-bottom: 5px; }
+.evento-nombre { font-size: 14px; font-weight: 600; color: var(--texto); line-height: 1.3; margin-bottom: 4px; }
+.evento-lugar { font-size: 12px; color: var(--texto-suave); }
+
+/* ── CONTACTO ── */
+.contacto-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; margin-top: 48px; }
+
+.contacto-datos { display: flex; flex-direction: column; gap: 12px; }
+.contacto-item {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(61,171,110,0.15);
+  border-radius: 8px; padding: 16px; transition: border-color .2s;
+}
+.contacto-item:hover { border-color: rgba(61,171,110,0.4); }
+.c-icono { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+.c-label { font-family: var(--mono); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 4px; }
+.c-valor { font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 500; }
+
+.mapa-placeholder {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(61,171,110,0.15);
+  border-radius: 10px; height: 280px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 10px;
+  cursor: pointer; transition: border-color .2s;
+}
+.mapa-placeholder:hover { border-color: rgba(61,171,110,0.4); }
+.mapa-txt { font-size: 12px; color: rgba(255,255,255,0.4); }
+
+/* ── FOOTER ── */
+footer {
+  background: #080b07; border-top: 1px solid rgba(61,171,110,0.15);
+  padding: 52px var(--pad) 24px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+}
+.footer-logo { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--verde-claro); letter-spacing: 2px; margin-bottom: 6px; }
+.footer-logo-sub { font-size: 9px; color: rgba(255,255,255,0.25); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+.footer-desc { font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.6; max-width: 220px; font-weight: 300; }
+.footer-col-titulo { font-family: var(--mono); font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 9px; }
+.footer-col ul li a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 12px; transition: color .2s; }
+.footer-col ul li a:hover { color: var(--verde-claro); }
+.footer-bottom { grid-column: 1/-1; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.2); font-family: var(--mono); }
+.footer-credit { font-size: 11px; color: var(--verde-claro); opacity: .4; font-family: var(--mono); }
+
+/* ── ANIMACIONES ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.hero-contenido { animation: fadeUp .8s ease both; }
+
+/* ══════════════════
+   RESPONSIVE
+══════════════════ */
+@media (max-width: 960px) {
+  .stats-bar { grid-template-columns: repeat(2,1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.1); }
+  .stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.1); border-right: none; }
+  .noticias-grid { grid-template-columns: 1fr 1fr; }
+  .noticia-card.principal { grid-column: span 2; grid-row: span 1; }
+  .servicios-grid { grid-template-columns: repeat(2,1fr); }
+  .agenda-grid { grid-template-columns: repeat(2,1fr); }
+  footer { grid-template-columns: 1fr 1fr; }
+  footer > div:first-child { grid-column: span 2; }
+  .footer-bottom { grid-column: span 2; }
+}
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .noticias-grid { grid-template-columns: 1fr; }
+  .noticia-card.principal { grid-column: span 1; }
+  .servicios-grid { grid-template-columns: 1fr; }
+  .matricula { grid-template-columns: 1fr; }
+  .agenda-grid { grid-template-columns: 1fr; }
+  .contacto-layout { grid-template-columns: 1fr; }
+  footer { grid-template-columns: 1fr; }
+  footer > div:first-child { grid-column: span 1; }
+  .footer-bottom { grid-column: span 1; flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .hero-titulo { font-size: 34px; }
+  .hero-btns { flex-direction: column; align-items: stretch; }
+  .btn-primary, .btn-outline { text-align: center; }
+  .form-row { grid-template-columns: 1fr; }
+  .seccion { padding: 60px var(--pad); }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icono">🌿</div>
+    <div class="nav-logo-texto">
+      <span class="nav-logo-sigla">CIAR</span>
+      <span class="nav-logo-sub">Reconquista · SF</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#noticias">Noticias</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#agenda">Agenda</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#matricula" class="nav-cta">Matricularme</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#noticias" onclick="closeMenu()">Noticias</a>
+  <a href="#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="#agenda" onclick="closeMenu()">Agenda</a>
+  <a href="#contacto" onclick="closeMenu()">Contacto</a>
+  <a href="#matricula" onclick="closeMenu()">Matricularme →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-contenido">
+    <div class="hero-chip">Colegio profesional activo desde 1987</div>
+    <h1 class="hero-titulo">
+      <span class="linea-mono">// ingenieros agrónomos</span>
+      Representando la <span class="verde">agronomía</span> del norte santafesino
+    </h1>
+    <p class="hero-desc">El Colegio de Ingenieros Agrónomos de Reconquista nuclea, representa y defiende el ejercicio profesional de la agronomía en el norte de Santa Fe.</p>
+    <div class="hero-btns">
+      <a href="#matricula" class="btn-primary">Solicitar matrícula</a>
+      <a href="#servicios" class="btn-outline">Ver servicios</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num">340+</div>
+    <div class="stat-label">Matriculados activos</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">37</div>
+    <div class="stat-label">Años de trayectoria</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">18</div>
+    <div class="stat-label">Distritos cubiertos</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">12</div>
+    <div class="stat-label">Eventos anuales</div>
+  </div>
+</div>
+
+<!-- NOTICIAS -->
+<section class="seccion fondo" id="noticias">
+  <div class="sec-header">
+    <div>
+      <div class="sec-eyebrow">Novedades</div>
+      <h2 class="sec-titulo">Últimas noticias</h2>
+    </div>
+    <a href="#" class="sec-link">Ver todas</a>
+  </div>
+  <div class="noticias-grid">
+    <div class="noticia-card principal">
+      <div class="noticia-imagen" style="height:240px"><span>🌾</span></div>
+      <div class="noticia-body">
+        <span class="noticia-tag tag-verde">Institucional</span>
+        <h3 class="noticia-titulo">Nueva resolución sobre habilitaciones para aplicaciones de fitosanitarios en zona norte</h3>
+        <span class="noticia-fecha">12 / 03 / 2026</span>
+      </div>
+    </div>
+    <div class="noticia-card">
+      <div class="noticia-imagen"><span>📋</span></div>
+      <div class="noticia-body">
+        <span class="noticia-tag tag-tierra">Normativa</span>
+        <h3 class="noticia-titulo">Actualización del arancel profesional 2026</h3>
+        <span class="noticia-fecha">08 / 03 / 2026</span>
+      </div>
+    </div>
+    <div class="noticia-card">
+      <div class="noticia-imagen"><span>🎓</span></div>
+      <div class="noticia-body">
+        <span class="noticia-tag tag-gris">Capacitación</span>
+        <h3 class="noticia-titulo">Jornada de actualización en agricultura de precisión — inscripciones abiertas</h3>
+        <span class="noticia-fecha">05 / 03 / 2026</span>
+      </div>
+    </div>
+    <div class="noticia-card">
+      <div class="noticia-imagen"><span>🤝</span></div>
+      <div class="noticia-body">
+        <span class="noticia-tag tag-verde">Convenio</span>
+        <h3 class="noticia-titulo">Acuerdo con INTA Reconquista para asistencia técnica conjunta</h3>
+        <span class="noticia-fecha">01 / 03 / 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="seccion oscura" id="servicios">
+  <div class="sec-header">
+    <div>
+      <div class="sec-eyebrow">Al matriculado</div>
+      <h2 class="sec-titulo claro">Servicios</h2>
+    </div>
+    <a href="#matricula" class="sec-link">Matricularme</a>
+  </div>
+  <div class="servicios-grid">
+    <div class="servicio-card">
+      <span class="servicio-icono">📜</span>
+      <div class="servicio-nombre">Habilitación profesional</div>
+      <div class="servicio-desc">Gestión de certificados y habilitaciones para el ejercicio legal de la profesión en la región.</div>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icono">⚖️</span>
+      <div class="servicio-nombre">Asesoramiento legal</div>
+      <div class="servicio-desc">Consultas sobre normativa vigente, contratos profesionales y defensa del ejercicio profesional.</div>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icono">📊</span>
+      <div class="servicio-nombre">Arancel profesional</div>
+      <div class="servicio-desc">Tabla de aranceles actualizada para informes, dictámenes, visaciones y tareas periciales.</div>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icono">🎓</span>
+      <div class="servicio-nombre">Capacitaciones</div>
+      <div class="servicio-desc">Jornadas técnicas, cursos de actualización y seminarios con especialistas del sector agropecuario.</div>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icono">🔬</span>
+      <div class="servicio-nombre">Visación de informes</div>
+      <div class="servicio-desc">Visación y registro de informes técnicos, planos y documentación agronómica ante organismos públicos.</div>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icono">🤝</span>
+      <div class="servicio-nombre">Red profesional</div>
+      <div class="servicio-desc">Directorio de matriculados, bolsa de trabajo y vinculación con empresas del sector.</div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section class="seccion fondo" id="agenda">
+  <div class="sec-header">
+    <div>
+      <div class="sec-eyebrow">Calendario</div>
+      <h2 class="sec-titulo">Próximos eventos</h2>
+    </div>
+    <a href="#" class="sec-link">Ver agenda completa</a>
+  </div>
+  <div class="agenda-grid">
+    <div class="evento-card">
+      <div class="evento-fecha">
+        <div class="evento-dia">20</div>
+        <div class="evento-mes">Mar</div>
+      </div>
+      <div class="evento-info">
+        <div class="evento-tipo">Jornada técnica</div>
+        <div class="evento-nombre">Agricultura de precisión: uso de drones y sensores remotos</div>
+        <div class="evento-lugar">📍 Auditorio sede central</div>
+      </div>
+    </div>
+    <div class="evento-card">
+      <div class="evento-fecha">
+        <div class="evento-dia">28</div>
+        <div class="evento-mes">Mar</div>
+      </div>
+      <div class="evento-info">
+        <div class="evento-tipo">Asamblea</div>
+        <div class="evento-nombre">Asamblea ordinaria anual de matriculados 2026</div>
+        <div class="evento-lugar">📍 Salón auditorio CIAR</div>
+      </div>
+    </div>
+    <div class="evento-card">
+      <div class="evento-fecha">
+        <div class="evento-dia">05</div>
+        <div class="evento-mes">Abr</div>
+      </div>
+      <div class="evento-info">
+        <div class="evento-tipo">Capacitación</div>
+        <div class="evento-nombre">Manejo integrado de plagas en cultivos de soja y maíz</div>
+        <div class="evento-lugar">📍 Sede Reconquista</div>
+      </div>
+    </div>
+    <div class="evento-card">
+      <div class="evento-fecha">
+        <div class="evento-dia">18</div>
+        <div class="evento-mes">Abr</div>
+      </div>
+      <div class="evento-info">
+        <div class="evento-tipo">Congreso</div>
+        <div class="evento-nombre">Encuentro regional de ingenieros agrónomos — Norte de Santa Fe</div>
+        <div class="evento-lugar">📍 Centro de Convenciones</div>
+      </div>
+    </div>
+    <div class="evento-card">
+      <div class="evento-fecha">
+        <div class="evento-dia">24</div>
+        <div class="evento-mes">Abr</div>
+      </div>
+      <div class="evento-info">
+        <div class="evento-tipo">Curso</div>
+        <div class="evento-nombre">Normativa ambiental y buenas prácticas agropecuarias</div>
+        <div class="evento-lugar">📍 Modalidad virtual</div>
+      </div>
+    </div>
+    <div class="evento-card">
+      <div class="evento-fecha">
+        <div class="evento-dia">10</div>
+        <div class="evento-mes">May</div>
+      </div>
+      <div class="evento-info">
+        <div class="evento-tipo">Taller</div>
+        <div class="evento-nombre">Taller de elaboración de informes técnicos y peritajes</div>
+        <div class="evento-lugar">📍 Sede central CIAR</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATRÍCULA -->
+<section class="matricula" id="matricula">
+  <div class="matricula-info">
+    <div class="sec-eyebrow">Ingresá al colegio</div>
+    <h2 class="sec-titulo">Solicitá tu matrícula</h2>
+    <p class="matricula-desc">La matrícula profesional es el requisito legal para ejercer la ingeniería agronómica en la provincia de Santa Fe. Completá el formulario y nos ponemos en contacto.</p>
+    <div class="requisitos">
+      <div class="req-item"><span class="req-check">✓</span> Título universitario de Ingeniero Agrónomo</div>
+      <div class="req-item"><span class="req-check">✓</span> DNI y CUIL actualizados</div>
+      <div class="req-item"><span class="req-check">✓</span> Certificado de libre sanción disciplinaria</div>
+      <div class="req-item"><span class="req-check">✓</span> Foto carnet 4x4</div>
+      <div class="req-item"><span class="req-check">✓</span> Pago del derecho de inscripción</div>
+    </div>
+    <a href="#contacto" class="btn-primary" style="width:fit-content">Consultar requisitos</a>
+  </div>
+  <div class="matricula-form">
+    <div class="form-titulo">Solicitar información</div>
+    <div class="form-sub">Completá tus datos y te contactamos para guiarte en el proceso.</div>
+    <div class="form-row">
+      <div class="form-grupo">
+        <label>Nombre</label>
+        <input type="text" placeholder="Carlos">
+      </div>
+      <div class="form-grupo">
+        <label>Apellido</label>
+        <input type="text" placeholder="Rodríguez">
+      </div>
+    </div>
+    <div class="form-grupo">
+      <label>Email</label>
+      <input type="email" placeholder="ingeniero@email.com">
+    </div>
+    <div class="form-grupo">
+      <label>Teléfono / WhatsApp</label>
+      <input type="tel" placeholder="+54 9 3482 XXXXXX">
+    </div>
+    <div class="form-grupo">
+      <label>Tipo de consulta</label>
+      <select>
+        <option value="">Seleccioná una opción</option>
+        <option>Quiero matricularme por primera vez</option>
+        <option>Transferencia de matrícula de otra provincia</option>
+        <option>Rehabilitación de matrícula</option>
+        <option>Consulta sobre servicios al matriculado</option>
+        <option>Otra consulta</option>
+      </select>
+    </div>
+    <div class="form-grupo">
+      <label>Universidad de egreso</label>
+      <input type="text" placeholder="UNL, UBA, UNRC...">
+    </div>
+    <button class="btn-form">Enviar consulta</button>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="seccion oscura" id="contacto">
+  <div class="sec-eyebrow">Encontranos</div>
+  <h2 class="sec-titulo claro">Contacto y ubicación</h2>
+  <p class="sec-desc claro">Estamos en el centro de Reconquista, de lunes a viernes en horario de atención.</p>
+  <div class="contacto-layout">
+    <div class="contacto-datos">
+      <div class="contacto-item">
+        <div class="c-icono">📍</div>
+        <div>
+          <div class="c-label">Dirección</div>
+          <div class="c-valor">Rivadavia 540, Reconquista, Santa Fe</div>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <div class="c-icono">📞</div>
+        <div>
+          <div class="c-label">Teléfono</div>
+          <div class="c-valor">(03482) 44-XXXX</div>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <div class="c-icono">✉️</div>
+        <div>
+          <div class="c-label">Email institucional</div>
+          <div class="c-valor">info@ciarsf.org.ar</div>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <div class="c-icono">🕐</div>
+        <div>
+          <div class="c-label">Atención al público</div>
+          <div class="c-valor">Lunes a viernes de 8:00 a 18:00 hs</div>
+        </div>
+      </div>
+    </div>
+    <div class="mapa-placeholder" onclick="this.innerHTML='<div style=\'text-align:center\'><div style=\'font-size:40px\'>📍</div><div style=\'font-size:13px;color:#3dab6e;font-weight:600;margin-top:8px\'>Rivadavia 540, Reconquista</div><div style=\'font-size:12px;color:rgba(255,255,255,0.4);margin-top:4px\'>Clic para abrir en Google Maps</div></div>'">
+      <span style="font-size:40px">🗺️</span>
+      <span class="mapa-txt">Ver en Google Maps</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">CIAR // SF</div>
+    <div class="footer-logo-sub">Colegio de Ingenieros Agrónomos de Reconquista</div>
+    <p class="footer-desc">Representando y defendiendo el ejercicio profesional de la ingeniería agronómica en el norte de Santa Fe desde 1987.</p>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Institución</div>
+    <ul>
+      <li><a href="#">Historia</a></li>
+      <li><a href="#">Autoridades</a></li>
+      <li><a href="#">Estatuto</a></li>
+      <li><a href="#">Transparencia</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Servicios</div>
+    <ul>
+      <li><a href="#">Matrícula</a></li>
+      <li><a href="#">Visaciones</a></li>
+      <li><a href="#">Aranceles</a></li>
+      <li><a href="#">Capacitaciones</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Contacto</div>
+    <ul>
+      <li><a href="#">WhatsApp</a></li>
+      <li><a href="#">Email</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Sede central</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 CIAR Reconquista — Todos los derechos reservados</span>
+    <span class="footer-credit">// diseño web · tu nombre acá</span>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.querySelector('.hamburger');
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>

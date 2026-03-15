@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══════════════════════════════════════════
+     SEO BÁSICO
+     Esto es lo que Google lee para mostrar
+     tu página en los resultados de búsqueda
+═══════════════════════════════════════════ -->
+
+<!-- Título que aparece en la pestaña del navegador
+     y como primer renglón en Google (máx. 60 caracteres) -->
+<title>Club Atlético Reconquista | Fútbol, Básquet y Natación en Santa Fe</title>
+
+<!-- Descripción que aparece debajo del título en Google (máx. 155 caracteres) -->
+<meta name="description" content="Club deportivo en Reconquista, Santa Fe. Fútbol, básquet, natación, tenis y artes marciales para niños, jóvenes y adultos. ¡Asociate hoy!">
+
+<!-- Palabras clave del negocio (Google las usa menos hoy,
+     pero otros motores como Bing sí las leen) -->
+<meta name="keywords" content="club deportivo Reconquista, fútbol Reconquista, básquet Santa Fe, natación Reconquista, deporte norte Santa Fe">
+
+<!-- Dice que Google puede indexar esta página
+     y seguir sus enlaces -->
+<meta name="robots" content="index, follow">
+
+<!-- URL exacta de la página (importante si el sitio
+     tiene varias versiones: con www, sin www, http, https) -->
+<link rel="canonical" href="https://www.clubatleticoreconquista.com.ar/">
+
+<!-- ═══════════════════════════════════════════
+     OPEN GRAPH — para redes sociales
+     Controla cómo se ve el link cuando alguien
+     lo comparte en WhatsApp, Facebook, Instagram
+═══════════════════════════════════════════ -->
+<meta property="og:title" content="Club Atlético Reconquista | Deporte para toda la familia">
+<meta property="og:description" content="Fútbol, básquet, natación, tenis y más en el corazón de Reconquista, Santa Fe. Más de 70 años formando deportistas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.clubatleticoreconquista.com.ar/">
+<!-- og:image: acá va una foto del club (1200x630px ideal) -->
+<meta property="og:image" content="https://www.clubatleticoreconquista.com.ar/img/preview-social.jpg">
+<meta property="og:locale" content="es_AR">
+
+<!-- ═══════════════════════════════════════════
+     DATOS ESTRUCTURADOS (Schema.org)
+     Esto le dice a Google exactamente qué tipo
+     de negocio es, dónde está y cómo contactarlo.
+     Puede hacer que aparezca un panel especial
+     en Google con el mapa, horarios y teléfono.
+═══════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsClub",
+  "name": "Club Atlético Reconquista",
+  "description": "Club deportivo en Reconquista, Santa Fe. Fútbol, básquet, natación, tenis y artes marciales para toda la familia.",
+  "url": "https://www.clubatleticoreconquista.com.ar",
+  "telephone": "+54-3482-42XXXX",
+  "foundingDate": "1952",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. San Martín 1250",
+    "addressLocality": "Reconquista",
+    "addressRegion": "Santa Fe",
+    "postalCode": "3560",
+    "addressCountry": "AR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
+  "sport": ["Fútbol", "Básquet", "Natación", "Tenis", "Artes marciales"]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --negro: #0a0a0a;
+  --blanco: #f5f4f0;
+  --acento: #c8ff00;
+  --gris: #1a1a1a;
+  --gris-medio: #2e2e2e;
+  --gris-texto: #888;
+  --display: 'Bebas Neue', sans-serif;
+  --cuerpo: 'DM Sans', sans-serif;
+  --pad: clamp(20px, 5vw, 48px);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--negro); color: var(--blanco); font-family: var(--cuerpo); font-weight: 300; overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px var(--pad);
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav-logo { font-family: var(--display); font-size: 20px; letter-spacing: 3px; color: var(--blanco); text-decoration: none; }
+.nav-logo span { color: var(--acento); }
+
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { color: var(--gris-texto); text-decoration: none; font-size: 12px; font-weight: 400; letter-spacing: 1.5px; text-transform: uppercase; transition: color .2s; }
+.nav-links a:hover { color: var(--blanco); }
+.nav-cta { background: var(--acento) !important; color: var(--negro) !important; padding: 8px 18px; border-radius: 2px; font-weight: 500 !important; }
+
+/* hamburger */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--blanco); transition: all .3s; }
+
+.mobile-menu {
+  display: none; position: fixed; top: 57px; left: 0; right: 0; z-index: 199;
+  background: rgba(10,10,10,0.98); backdrop-filter: blur(16px);
+  padding: 24px var(--pad) 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-direction: column; gap: 0;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  color: var(--gris-texto); text-decoration: none; font-size: 13px; font-weight: 400;
+  letter-spacing: 1.5px; text-transform: uppercase; padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06); transition: color .2s;
+}
+.mobile-menu a:last-child { border-bottom: none; color: var(--acento); margin-top: 8px; }
+.mobile-menu a:hover { color: var(--blanco); }
+
+/* ── HERO ── */
+.hero { min-height: 100svh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 57px; }
+
+.hero-left { display: flex; flex-direction: column; justify-content: center; padding: 60px var(--pad); }
+
+.hero-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gris-texto); margin-bottom: 28px; }
+.hero-tag::before { content: ''; display: block; width: 20px; height: 1px; background: var(--acento); }
+
+.hero-titulo { font-family: var(--display); font-size: clamp(56px, 8vw, 110px); line-height: .92; letter-spacing: 2px; margin-bottom: 24px; }
+.hero-titulo .acento { color: var(--acento); }
+
+.hero-desc { font-size: 14px; line-height: 1.7; color: var(--gris-texto); max-width: 360px; margin-bottom: 40px; }
+
+.hero-btns { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+
+.btn-primary { background: var(--acento); color: var(--negro); padding: 13px 28px; font-family: var(--cuerpo); font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; text-decoration: none; transition: background .2s, transform .15s; display: inline-block; }
+.btn-primary:hover { background: #d4ff1a; transform: translateY(-1px); }
+
+.btn-secondary { color: var(--blanco); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: gap .2s; }
+.btn-secondary:hover { gap: 14px; }
+.btn-secondary::after { content: '→'; }
+
+.hero-right { position: relative; overflow: hidden; background: var(--gris); min-height: 340px; }
+.hero-img { width: 100%; height: 100%; background: linear-gradient(135deg, #1a1a1a 0%, #111 50%, #0f0f0f 100%); display: flex; align-items: center; justify-content: center; position: relative; }
+.hero-img::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(200,255,0,0.08) 0%, transparent 60%); }
+.hero-num { font-family: var(--display); font-size: clamp(160px, 22vw, 280px); color: rgba(255,255,255,0.03); line-height: 1; user-select: none; }
+
+.hero-badge { position: absolute; bottom: 28px; left: 28px; background: var(--acento); color: var(--negro); padding: 14px 20px; border-radius: 2px; }
+.hero-badge-num { font-family: var(--display); font-size: 32px; line-height: 1; }
+.hero-badge-text { font-size: 9px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+
+/* ── STATS ── */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+.stat-item { padding: 32px var(--pad); border-right: 1px solid rgba(255,255,255,0.06); }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: var(--display); font-size: clamp(36px, 4vw, 52px); color: var(--acento); line-height: 1; margin-bottom: 4px; }
+.stat-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gris-texto); }
+
+/* ── SECCIONES ── */
+.seccion { padding: 80px var(--pad); }
+.seccion-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
+.seccion-titulo { font-family: var(--display); font-size: clamp(36px, 5vw, 64px); letter-spacing: 2px; line-height: 1; }
+.seccion-link { color: var(--acento); text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; display: flex; align-items: center; gap: 8px; transition: gap .2s; white-space: nowrap; }
+.seccion-link:hover { gap: 14px; }
+.seccion-link::after { content: '→'; }
+
+/* ── NOTICIAS ── */
+.noticias-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: auto auto; gap: 1px; background: rgba(255,255,255,0.06); }
+
+.noticia-card { background: var(--negro); padding: 28px; transition: background .2s; cursor: pointer; }
+.noticia-card:hover { background: var(--gris); }
+
+.noticia-card.destacada { grid-row: span 2; display: flex; flex-direction: column; justify-content: flex-end; min-height: 360px; background: var(--gris); position: relative; overflow: hidden; }
+.noticia-card.destacada::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.1) 100%); }
+.noticia-card.destacada > * { position: relative; z-index: 1; }
+.fondo-num { position: absolute; top: -20px; right: -10px; font-family: var(--display); font-size: 160px; color: rgba(200,255,0,0.05); line-height: 1; z-index: 0; }
+
+.noticia-tag { display: inline-block; background: var(--acento); color: var(--negro); font-size: 9px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 4px 10px; border-radius: 1px; margin-bottom: 12px; }
+.noticia-titulo { font-family: var(--display); font-size: 22px; letter-spacing: 1px; line-height: 1.1; margin-bottom: 10px; }
+.noticia-card.destacada .noticia-titulo { font-size: clamp(24px, 3vw, 34px); }
+.noticia-fecha { font-size: 11px; color: var(--gris-texto); letter-spacing: 1px; }
+
+/* ── DISCIPLINAS ── */
+.disciplinas { background: var(--gris); }
+.disciplinas-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: rgba(255,255,255,0.06); margin-top: 48px; }
+.disciplina-item { background: var(--gris); padding: 36px 20px; text-align: center; cursor: pointer; border-top: 2px solid transparent; transition: all .2s; }
+.disciplina-item:hover { background: #222; border-top-color: var(--acento); }
+.disciplina-icono { font-size: 28px; margin-bottom: 14px; display: block; }
+.disciplina-nombre { font-family: var(--display); font-size: 18px; letter-spacing: 2px; margin-bottom: 6px; }
+.disciplina-desc { font-size: 11px; color: var(--gris-texto); letter-spacing: 1px; }
+
+/* ── FORMULARIO ── */
+.turnos { display: grid; grid-template-columns: 1fr 1fr; }
+
+.turnos-info { padding: 80px var(--pad); background: var(--acento); color: var(--negro); display: flex; flex-direction: column; justify-content: center; }
+.turnos-info .seccion-titulo { color: var(--negro); }
+.turnos-desc { font-size: 14px; line-height: 1.7; color: rgba(0,0,0,0.6); margin: 20px 0 36px; }
+.turnos-dato { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: var(--negro); margin-bottom: 10px; }
+.turnos-dato::before { content: ''; width: 5px; height: 5px; background: var(--negro); border-radius: 50%; flex-shrink: 0; }
+
+.turnos-form { padding: 80px var(--pad); background: var(--gris); display: flex; flex-direction: column; justify-content: center; }
+.form-titulo { font-family: var(--display); font-size: 32px; letter-spacing: 2px; margin-bottom: 32px; }
+.form-grupo { margin-bottom: 16px; }
+.form-grupo label { display: block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gris-texto); margin-bottom: 7px; }
+.form-grupo input, .form-grupo select {
+  width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 2px; padding: 11px 14px; color: var(--blanco); font-family: var(--cuerpo);
+  font-size: 14px; outline: none; transition: border-color .2s; -webkit-appearance: none;
+}
+.form-grupo input:focus, .form-grupo select:focus { border-color: var(--acento); }
+.form-grupo select option { background: var(--gris); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.btn-form { width: 100%; background: var(--acento); color: var(--negro); border: none; padding: 14px; font-family: var(--cuerpo); font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; border-radius: 2px; cursor: pointer; margin-top: 6px; transition: background .2s; }
+.btn-form:hover { background: #d4ff1a; }
+
+/* ── FOOTER ── */
+footer { background: var(--negro); border-top: 1px solid rgba(255,255,255,0.06); padding: 56px var(--pad) 28px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+.footer-logo { font-family: var(--display); font-size: 24px; letter-spacing: 3px; margin-bottom: 14px; }
+.footer-logo span { color: var(--acento); }
+.footer-desc { font-size: 13px; color: var(--gris-texto); line-height: 1.6; max-width: 240px; }
+.footer-col-titulo { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gris-texto); margin-bottom: 18px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 9px; }
+.footer-col ul li a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 13px; transition: color .2s; }
+.footer-col ul li a:hover { color: var(--blanco); }
+.footer-bottom { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.footer-copy { font-size: 11px; color: var(--gris-texto); letter-spacing: .5px; }
+.footer-credit { font-size: 11px; color: rgba(200,255,0,0.5); letter-spacing: .5px; }
+
+/* ── ANIMACIONES ── */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.hero-left { animation: fadeUp .7s ease both; }
+.hero-right { animation: fadeUp .7s ease .15s both; }
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+
+/* Tablet grande */
+@media (max-width: 960px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.06); }
+  .stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.06); border-right: none; }
+
+  .noticias-grid { grid-template-columns: 1fr 1fr; }
+  .noticia-card.destacada { grid-column: span 2; grid-row: span 1; min-height: 280px; }
+
+  .disciplinas-grid { grid-template-columns: repeat(3, 1fr); }
+
+  footer { grid-template-columns: 1fr 1fr; }
+  footer > div:first-child { grid-column: span 2; }
+  .footer-bottom { grid-column: span 2; }
+}
+
+/* Tablet chica / móvil grande */
+@media (max-width: 720px) {
+  /* nav */
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  /* hero: apilado */
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 48px var(--pad) 40px; }
+  .hero-right { min-height: 260px; order: -1; }
+  .hero-num { font-size: 140px; }
+
+  /* noticias: una columna */
+  .noticias-grid { grid-template-columns: 1fr; }
+  .noticia-card.destacada { grid-column: span 1; min-height: 240px; }
+
+  /* disciplinas: 2 columnas */
+  .disciplinas-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* turnos: apilado */
+  .turnos { grid-template-columns: 1fr; }
+
+  /* footer: una columna */
+  footer { grid-template-columns: 1fr; }
+  footer > div:first-child { grid-column: span 1; }
+  .footer-bottom { grid-column: span 1; flex-direction: column; align-items: flex-start; }
+}
+
+/* Móvil */
+@media (max-width: 480px) {
+  .hero-titulo { font-size: 52px; }
+  .hero-btns { flex-direction: column; align-items: flex-start; }
+  .btn-primary { width: 100%; text-align: center; }
+
+  .form-row { grid-template-columns: 1fr; }
+
+  .stats { grid-template-columns: repeat(2, 1fr); }
+
+  .disciplinas-grid { grid-template-columns: repeat(2, 1fr); }
+  .disciplina-item:last-child { grid-column: span 2; }
+
+  .seccion { padding: 60px var(--pad); }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">CAR<span>·</span>25</a>
+  <ul class="nav-links">
+    <li><a href="#noticias">Noticias</a></li>
+    <li><a href="#disciplinas">Disciplinas</a></li>
+    <li><a href="#turnos">Inscripciones</a></li>
+    <li><a href="#turnos" class="nav-cta">Asociarse</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#noticias" onclick="closeMenu()">Noticias</a>
+  <a href="#disciplinas" onclick="closeMenu()">Disciplinas</a>
+  <a href="#turnos" onclick="closeMenu()">Inscripciones</a>
+  <a href="#turnos" onclick="closeMenu()">Asociarse →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-tag">Club Atlético Reconquista — Desde 1952</span>
+    <!-- H1: único por página, con palabras clave del negocio -->
+    <h1 class="hero-titulo">MÁS QUE<br>UN <span class="acento">CLUB</span></h1>
+    <!-- El texto visible también lo indexa Google -->
+    <p class="hero-desc">Formamos deportistas y personas. Fútbol, básquet, natación, tenis y más disciplinas para toda la familia en el corazón de Reconquista, Santa Fe.</p>
+    <div class="hero-btns">
+      <a href="#turnos" class="btn-primary">Quiero asociarme</a>
+      <a href="#disciplinas" class="btn-secondary">Ver disciplinas</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img">
+      <span class="hero-num">72</span>
+      <div class="hero-badge">
+        <div class="hero-badge-num">1952</div>
+        <div class="hero-badge-text">Año de fundación</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-num">1.200+</div>
+    <div class="stat-label">Socios activos</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">8</div>
+    <div class="stat-label">Disciplinas</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">72</div>
+    <div class="stat-label">Años de historia</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">34</div>
+    <div class="stat-label">Equipos activos</div>
+  </div>
+</div>
+
+<!-- NOTICIAS -->
+<section class="seccion" id="noticias">
+  <div class="seccion-header">
+    <h2 class="seccion-titulo">ÚLTIMAS<br>NOTICIAS</h2>
+    <a href="#" class="seccion-link">Ver todas</a>
+  </div>
+  <div class="noticias-grid">
+    <div class="noticia-card destacada">
+      <span class="fondo-num">01</span>
+      <span class="noticia-tag">Fútbol</span>
+      <h3 class="noticia-titulo">Clasificamos a la final del torneo regional de primera división</h3>
+      <span class="noticia-fecha">12 de marzo, 2026</span>
+    </div>
+    <div class="noticia-card">
+      <span class="noticia-tag">Natación</span>
+      <h3 class="noticia-titulo">Tres medallas en el provincial sub-18</h3>
+      <span class="noticia-fecha">8 de marzo, 2026</span>
+    </div>
+    <div class="noticia-card">
+      <span class="noticia-tag">Institucional</span>
+      <h3 class="noticia-titulo">Asamblea anual de socios — 28 de marzo</h3>
+      <span class="noticia-fecha">5 de marzo, 2026</span>
+    </div>
+    <div class="noticia-card">
+      <span class="noticia-tag">Básquet</span>
+      <h3 class="noticia-titulo">Inicio de pretemporada: convocatoria abierta</h3>
+      <span class="noticia-fecha">1 de marzo, 2026</span>
+    </div>
+    <div class="noticia-card">
+      <span class="noticia-tag">Tenis</span>
+      <h3 class="noticia-titulo">Torneo de verano — resultados y próxima fecha</h3>
+      <span class="noticia-fecha">26 de febrero, 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- DISCIPLINAS -->
+<section class="seccion disciplinas" id="disciplinas">
+  <div class="seccion-header">
+    <h2 class="seccion-titulo">NUESTRAS<br>DISCIPLINAS</h2>
+    <a href="#" class="seccion-link">Más info</a>
+  </div>
+  <div class="disciplinas-grid">
+    <div class="disciplina-item">
+      <span class="disciplina-icono">⚽</span>
+      <div class="disciplina-nombre">Fútbol</div>
+      <div class="disciplina-desc">Infantil · Juvenil · Primera</div>
+    </div>
+    <div class="disciplina-item">
+      <span class="disciplina-icono">🏀</span>
+      <div class="disciplina-nombre">Básquet</div>
+      <div class="disciplina-desc">Mini · U15 · U19 · Mayor</div>
+    </div>
+    <div class="disciplina-item">
+      <span class="disciplina-icono">🏊</span>
+      <div class="disciplina-nombre">Natación</div>
+      <div class="disciplina-desc">Bebés · Niños · Adultos</div>
+    </div>
+    <div class="disciplina-item">
+      <span class="disciplina-icono">🎾</span>
+      <div class="disciplina-nombre">Tenis</div>
+      <div class="disciplina-desc">Clases · Torneos · Escuela</div>
+    </div>
+    <div class="disciplina-item">
+      <span class="disciplina-icono">🥋</span>
+      <div class="disciplina-nombre">Artes marciales</div>
+      <div class="disciplina-desc">Judo · Karate · Taekwondo</div>
+    </div>
+  </div>
+</section>
+
+<!-- ASOCIARSE -->
+<section class="turnos" id="turnos">
+  <div class="turnos-info">
+    <h2 class="seccion-titulo">ASOCIATE<br>HOY</h2>
+    <p class="turnos-desc">Completá el formulario y nos ponemos en contacto para darte toda la información sobre cuotas, beneficios y próximas actividades.</p>
+    <div class="turnos-dato">Lunes a viernes de 8:00 a 21:00 hs</div>
+    <div class="turnos-dato">Sábados de 8:00 a 18:00 hs</div>
+    <div class="turnos-dato">Av. San Martín 1250, Reconquista</div>
+    <div class="turnos-dato">(03482) 42-XXXX</div>
+  </div>
+  <div class="turnos-form">
+    <div class="form-titulo">SOLICITAR<br>INFORMACIÓN</div>
+    <div class="form-row">
+      <div class="form-grupo">
+        <label>Nombre</label>
+        <input type="text" placeholder="Juan">
+      </div>
+      <div class="form-grupo">
+        <label>Apellido</label>
+        <input type="text" placeholder="García">
+      </div>
+    </div>
+    <div class="form-grupo">
+      <label>Teléfono / WhatsApp</label>
+      <input type="tel" placeholder="+54 9 3482 XXXXXX">
+    </div>
+    <div class="form-grupo">
+      <label>Disciplina de interés</label>
+      <select>
+        <option value="">Seleccioná una disciplina</option>
+        <option>Fútbol</option>
+        <option>Básquet</option>
+        <option>Natación</option>
+        <option>Tenis</option>
+        <option>Artes marciales</option>
+        <option>Quiero conocer todas</option>
+      </select>
+    </div>
+    <div class="form-grupo">
+      <label>Edad del interesado</label>
+      <select>
+        <option value="">Seleccioná rango</option>
+        <option>Menor de 6 años</option>
+        <option>6 a 12 años</option>
+        <option>13 a 18 años</option>
+        <option>Mayor de 18 años</option>
+      </select>
+    </div>
+    <button class="btn-form">Enviar consulta</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">CAR<span>·</span>25</div>
+    <p class="footer-desc">Club Atlético Reconquista. Formando deportistas y comunidad desde 1952 en el norte de Santa Fe.</p>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Institución</div>
+    <ul>
+      <li><a href="#">Historia</a></li>
+      <li><a href="#">Comisión directiva</a></li>
+      <li><a href="#">Instalaciones</a></li>
+      <li><a href="#">Reglamento</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Disciplinas</div>
+    <ul>
+      <li><a href="#">Fútbol</a></li>
+      <li><a href="#">Básquet</a></li>
+      <li><a href="#">Natación</a></li>
+      <li><a href="#">Tenis</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Contacto</div>
+    <ul>
+      <li><a href="#">WhatsApp</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Email</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Club Atlético Reconquista — Todos los derechos reservados</span>
+    <span class="footer-credit">Diseño web · Tu nombre acá</span>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.querySelector('.hamburger');
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>

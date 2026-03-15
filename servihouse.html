@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>ServiHouse | Maestro Mayor de Obra · Gasista Matriculado · Técnico en Refrigeración — Córdoba</title>
+<meta name="description" content="Carlos Javier Soto en Córdoba Capital. Maestro Mayor de Obra, Gasista Matriculado y Técnico en Refrigeración. Obras, instalaciones de gas, refrigeración, presupuestos y facturación oficial.">
+<meta name="keywords" content="maestro mayor de obra Córdoba, gasista matriculado Córdoba Capital, técnico refrigeración Córdoba, obras construcción Córdoba, instalación gas Córdoba, presupuesto obra Córdoba">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.servihouse.com.ar/">
+<meta property="og:title" content="ServiHouse | Carlos Javier Soto — Córdoba Capital">
+<meta property="og:description" content="Maestro Mayor de Obra, Gasista Matriculado y Técnico en Refrigeración. Presupuesto sin cargo. Facturación oficial. Córdoba y alrededores.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "ServiHouse",
+  "description": "Servicios de construcción, instalaciones de gas y refrigeración en Córdoba Capital y alrededores.",
+  "url": "https://www.servihouse.com.ar",
+  "telephone": "+54-9-351-XXXXXXX",
+  "areaServed": ["Córdoba Capital", "Gran Córdoba", "Río Ceballos", "Villa Allende", "Mendiolaza", "La Calera"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Córdoba",
+    "addressRegion": "Córdoba",
+    "addressCountry": "AR"
+  },
+  "employee": {
+    "@type": "Person",
+    "name": "Carlos Javier Soto",
+    "jobTitle": ["Maestro Mayor de Obra", "Gasista Matriculado", "Técnico en Refrigeración"],
+    "worksFor": {"@type": "Organization", "name": "ServiHouse"},
+    "areaServed": "Córdoba Capital y alrededores"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Planificación y ejecución de obras — Córdoba"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Seguimiento de obras — Córdoba"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Instalaciones de gas matriculado — Córdoba"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Reparación y refrigeración — Córdoba"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lectura e interpretación de planos — Córdoba"}}
+    ]
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --negro: #111214;
+  --negro2: #17191c;
+  --gris-oscuro: #1e2124;
+  --gris-medio: #2c3035;
+  --naranja: #e05c1a;
+  --naranja2: #c44e12;
+  --naranja-claro: #fff3ec;
+  --naranja-suave: #fde8d8;
+  --blanco: #f8f6f3;
+  --fondo: #f2f0ec;
+  --texto: #1a1814;
+  --texto-suave: #5a5550;
+  --borde: #e0dbd4;
+  --borde-oscuro: rgba(255,255,255,0.08);
+  --display: 'DM Serif Display', serif;
+  --cuerpo: 'DM Sans', sans-serif;
+  --pad: clamp(20px, 5vw, 64px);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--fondo); color: var(--texto); font-family: var(--cuerpo); font-weight: 400; overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(17,18,20,0.96); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--borde-oscuro);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--pad); height: 62px;
+}
+
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-icono { width: 32px; height: 32px; background: var(--naranja); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.nav-logo-txt { font-family: var(--cuerpo); font-size: 18px; font-weight: 600; color: var(--blanco); letter-spacing: -.3px; }
+.nav-logo-txt span { color: var(--naranja); }
+
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; font-weight: 500; transition: color .2s; }
+.nav-links a:hover { color: var(--blanco); }
+.nav-cta { background: var(--naranja) !important; color: #fff !important; padding: 8px 20px; border-radius: 6px; font-weight: 600 !important; }
+.nav-cta:hover { background: var(--naranja2) !important; }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--blanco); }
+
+.mobile-menu {
+  display: none; position: fixed; top: 62px; left: 0; right: 0; z-index: 199;
+  background: rgba(17,18,20,0.98); border-bottom: 1px solid var(--borde-oscuro);
+  padding: 20px var(--pad) 28px; flex-direction: column;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; font-weight: 500; padding: 13px 0; border-bottom: 1px solid var(--borde-oscuro); transition: color .2s; }
+.mobile-menu a:last-child { border-bottom: none; color: var(--naranja); margin-top: 6px; }
+.mobile-menu a:hover { color: var(--blanco); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100svh; padding-top: 62px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  background: var(--negro);
+}
+
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 60px var(--pad); position: relative; z-index: 1;
+}
+
+.hero-credenciales { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.credencial {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  padding: 5px 12px; border-radius: 4px;
+  font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.65); letter-spacing: .3px;
+}
+.credencial.destacada { background: rgba(224,92,26,0.15); border-color: rgba(224,92,26,0.35); color: #ffb899; }
+.credencial-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--naranja); flex-shrink: 0; }
+
+.hero-titulo {
+  font-family: var(--display); font-size: clamp(40px, 5.5vw, 72px);
+  line-height: 1.05; color: var(--blanco); margin-bottom: 20px;
+}
+.hero-titulo em { font-style: italic; color: var(--naranja); }
+
+.hero-nombre {
+  font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.4);
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-nombre::before { content: '—'; color: var(--naranja); }
+
+.hero-desc { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.5); max-width: 420px; margin-bottom: 40px; font-weight: 300; }
+
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+
+.btn-primary {
+  background: var(--naranja); color: #fff; padding: 13px 28px;
+  border-radius: 6px; font-family: var(--cuerpo); font-size: 13px; font-weight: 600;
+  text-decoration: none; border: none; cursor: pointer;
+  transition: all .2s; display: inline-block;
+}
+.btn-primary:hover { background: var(--naranja2); transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent; color: var(--blanco); padding: 13px 28px;
+  border-radius: 6px; font-family: var(--cuerpo); font-size: 13px; font-weight: 500;
+  text-decoration: none; border: 1px solid rgba(255,255,255,0.15); transition: all .2s; display: inline-block;
+}
+.btn-outline:hover { border-color: var(--naranja); color: var(--naranja); }
+
+.hero-chips { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero-chip { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.5); }
+.hero-chip::before { content: '✓'; color: var(--naranja); font-weight: 700; }
+
+.hero-right {
+  position: relative; overflow: hidden;
+  background: var(--negro2); border-left: 1px solid var(--borde-oscuro);
+  display: flex; align-items: center; justify-content: center; padding: 40px;
+}
+
+.perfil-card {
+  background: var(--gris-oscuro); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px; padding: 28px; width: 100%; max-width: 320px;
+}
+
+.perfil-avatar {
+  width: 64px; height: 64px; border-radius: 12px;
+  background: var(--naranja); display: flex; align-items: center;
+  justify-content: center; font-family: var(--display); font-size: 24px;
+  font-weight: 400; color: #fff; margin-bottom: 16px;
+}
+
+.perfil-nombre { font-size: 18px; font-weight: 600; color: var(--blanco); margin-bottom: 4px; }
+.perfil-sub { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 20px; letter-spacing: .5px; }
+
+.perfil-roles { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.perfil-rol {
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 6px; padding: 10px 14px;
+}
+.perfil-rol-icono { font-size: 16px; flex-shrink: 0; }
+.perfil-rol-txt { font-size: 13px; font-weight: 500; color: var(--blanco); }
+.perfil-rol-sub { font-size: 10px; color: rgba(255,255,255,0.35); margin-top: 1px; }
+
+.perfil-disponible {
+  background: rgba(224,92,26,0.12); border: 1px solid rgba(224,92,26,0.25);
+  border-radius: 6px; padding: 12px 14px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.perfil-disp-txt { font-size: 12px; font-weight: 600; color: #ffb899; }
+.perfil-disp-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 8px #4ade80; }
+
+/* ── STATS ── */
+.stats {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  background: var(--naranja); border-top: 3px solid var(--naranja2);
+}
+.stat-item { padding: 24px var(--pad); border-right: 1px solid rgba(255,255,255,0.15); text-align: center; }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: var(--display); font-size: clamp(30px,4vw,48px); color: #fff; line-height: 1; margin-bottom: 4px; }
+.stat-label { font-size: 11px; color: rgba(255,255,255,0.7); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; }
+
+/* ── SECCIONES ── */
+.seccion { padding: 88px var(--pad); }
+.seccion.blanco { background: var(--blanco); }
+.seccion.fondo { background: var(--fondo); }
+.seccion.oscuro { background: var(--negro); }
+
+.sec-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--naranja); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.sec-eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--naranja); border-radius: 1px; }
+.sec-eyebrow.claro { color: #ffb899; }
+.sec-eyebrow.claro::before { background: #ffb899; }
+
+.sec-titulo { font-family: var(--display); font-size: clamp(30px,4vw,52px); color: var(--texto); line-height: 1.1; margin-bottom: 14px; }
+.sec-titulo.claro { color: var(--blanco); }
+.sec-desc { font-size: 15px; color: var(--texto-suave); max-width: 540px; margin-bottom: 52px; line-height: 1.7; font-weight: 300; }
+.sec-desc.claro { color: rgba(255,255,255,0.5); }
+
+.sec-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 44px; flex-wrap: wrap; gap: 16px; }
+.sec-link { font-size: 12px; font-weight: 600; color: var(--naranja); text-decoration: none; display: flex; align-items: center; gap: 6px; letter-spacing: .5px; transition: gap .2s; }
+.sec-link:hover { gap: 12px; }
+.sec-link::after { content: '→'; }
+
+/* ── SERVICIOS ── */
+.servicios-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+
+.servicio-card {
+  background: var(--blanco); border: 1.5px solid var(--borde);
+  border-radius: 12px; padding: 28px; cursor: default;
+  border-top: 3px solid transparent; transition: all .2s;
+}
+.servicio-card:hover { border-top-color: var(--naranja); box-shadow: 0 8px 28px rgba(224,92,26,0.08); transform: translateY(-2px); }
+
+.servicio-icono { font-size: 32px; margin-bottom: 16px; display: block; }
+.servicio-nombre { font-family: var(--display); font-size: 20px; color: var(--texto); margin-bottom: 8px; line-height: 1.2; }
+.servicio-desc { font-size: 13px; color: var(--texto-suave); line-height: 1.6; margin-bottom: 16px; font-weight: 300; }
+.servicio-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.stag { font-size: 10px; font-weight: 600; letter-spacing: .5px; padding: 3px 10px; border-radius: 100px; background: var(--naranja-claro); color: var(--naranja); }
+
+/* ── PORTFOLIO ── */
+.portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+
+.proyecto-card {
+  background: var(--gris-oscuro); border: 1px solid var(--borde-oscuro);
+  border-radius: 10px; overflow: hidden; cursor: pointer; transition: all .2s;
+}
+.proyecto-card:hover { border-color: rgba(224,92,26,0.4); transform: translateY(-2px); }
+
+.proyecto-imagen {
+  height: 160px; background: var(--gris-medio);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px; position: relative;
+}
+.proyecto-imagen::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.5));
+}
+.proyecto-body { padding: 18px; }
+.proyecto-tipo { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--naranja); margin-bottom: 6px; }
+.proyecto-nombre { font-size: 15px; font-weight: 600; color: var(--blanco); margin-bottom: 5px; line-height: 1.3; }
+.proyecto-detalle { font-size: 12px; color: rgba(255,255,255,0.4); }
+
+/* ── PRESUPUESTO ── */
+.presupuesto-wrap { display: grid; grid-template-columns: 1fr 1fr; }
+
+.presupuesto-info {
+  padding: 88px var(--pad); background: var(--naranja);
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.presupuesto-info::after {
+  content: '✓'; position: absolute; right: -30px; bottom: -60px;
+  font-size: 280px; color: rgba(255,255,255,0.05); line-height: 1; pointer-events: none;
+}
+.presupuesto-info .sec-titulo { color: #fff; }
+.presupuesto-info .sec-eyebrow { color: rgba(255,255,255,0.7); }
+.presupuesto-info .sec-eyebrow::before { background: rgba(255,255,255,0.5); }
+.presupuesto-desc { font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.7; margin: 16px 0 28px; max-width: 380px; font-weight: 300; }
+.beneficios { display: flex; flex-direction: column; gap: 12px; }
+.beneficio { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; color: #fff; }
+.beneficio-check { width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 10px; flex-shrink: 0; color: #fff; }
+
+.presupuesto-form-wrap {
+  padding: 88px var(--pad); background: var(--blanco);
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.form-titulo { font-family: var(--display); font-size: 28px; color: var(--texto); margin-bottom: 6px; }
+.form-sub { font-size: 13px; color: var(--texto-suave); margin-bottom: 28px; font-weight: 300; }
+
+.form-grupo { margin-bottom: 14px; }
+.form-grupo label { display: block; font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--texto-suave); margin-bottom: 7px; }
+.form-grupo input, .form-grupo select, .form-grupo textarea {
+  width: 100%; background: var(--fondo); border: 1.5px solid var(--borde);
+  border-radius: 7px; padding: 11px 14px; color: var(--texto);
+  font-family: var(--cuerpo); font-size: 14px; outline: none;
+  transition: border-color .2s; -webkit-appearance: none;
+}
+.form-grupo input:focus, .form-grupo select:focus, .form-grupo textarea:focus { border-color: var(--naranja); background: var(--blanco); }
+.form-grupo textarea { resize: vertical; min-height: 80px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.factura-badge {
+  display: flex; align-items: center; gap: 8px; background: var(--naranja-claro);
+  border: 1px solid var(--naranja-suave); border-radius: 6px;
+  padding: 10px 14px; font-size: 12px; color: var(--naranja); font-weight: 500; margin-bottom: 14px;
+}
+.btn-form {
+  width: 100%; background: var(--naranja); color: #fff; border: none;
+  padding: 14px; border-radius: 7px; font-family: var(--cuerpo); font-size: 14px;
+  font-weight: 600; cursor: pointer; transition: background .2s;
+}
+.btn-form:hover { background: var(--naranja2); }
+.btn-wsp-form {
+  width: 100%; background: #25d366; color: #fff; border: none;
+  padding: 13px; border-radius: 7px; font-family: var(--cuerpo); font-size: 13px;
+  font-weight: 600; cursor: pointer; margin-top: 10px; transition: background .2s;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  text-decoration: none;
+}
+.btn-wsp-form:hover { background: #20bc5a; }
+
+/* ── ZONA ── */
+.zona-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; align-items: start; }
+
+.zona-lista { display: flex; flex-direction: column; gap: 8px; }
+.zona-item {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--blanco); border: 1.5px solid var(--borde);
+  border-radius: 8px; padding: 13px 16px; transition: all .2s;
+  border-left: 3px solid transparent;
+}
+.zona-item:hover { border-left-color: var(--naranja); }
+.zona-item.principal { border-left-color: var(--naranja); background: var(--naranja-claro); }
+.zona-nombre { font-size: 14px; font-weight: 500; color: var(--texto); display: flex; align-items: center; gap: 8px; }
+.zona-dist { font-size: 11px; font-weight: 600; color: var(--texto-suave); letter-spacing: .5px; }
+
+.zona-cards { display: flex; flex-direction: column; gap: 14px; }
+.zona-card {
+  background: var(--blanco); border: 1.5px solid var(--borde);
+  border-radius: 10px; padding: 20px; display: flex; gap: 14px; align-items: flex-start;
+}
+.zona-card-icono { font-size: 22px; flex-shrink: 0; }
+.zona-card-titulo { font-size: 14px; font-weight: 600; color: var(--texto); margin-bottom: 4px; }
+.zona-card-txt { font-size: 13px; color: var(--texto-suave); line-height: 1.5; font-weight: 300; }
+
+/* ── CONTACTO ── */
+.contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
+
+.contacto-lado { display: flex; flex-direction: column; gap: 14px; }
+.contacto-card {
+  background: var(--gris-oscuro); border: 1px solid var(--borde-oscuro);
+  border-radius: 8px; padding: 18px; display: flex; gap: 14px;
+  align-items: flex-start; transition: border-color .2s; text-decoration: none;
+}
+.contacto-card:hover { border-color: rgba(224,92,26,0.4); }
+.c-icono { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+.c-label { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 4px; }
+.c-valor { font-size: 14px; color: var(--blanco); font-weight: 500; }
+.c-sub { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 2px; }
+
+.wsp-card {
+  background: #25d366; border-radius: 8px; padding: 20px 22px;
+  display: flex; align-items: center; gap: 14px;
+  cursor: pointer; text-decoration: none; transition: background .2s;
+}
+.wsp-card:hover { background: #20bc5a; }
+.wsp-icono { font-size: 28px; }
+.wsp-titulo { font-size: 16px; font-weight: 600; color: #fff; }
+.wsp-sub { font-size: 12px; color: rgba(255,255,255,0.75); margin-top: 2px; }
+
+.perfil-contacto {
+  background: var(--gris-oscuro); border: 1px solid var(--borde-oscuro);
+  border-radius: 8px; padding: 20px; display: flex; gap: 14px; align-items: center;
+}
+.pc-avatar { width: 48px; height: 48px; border-radius: 10px; background: var(--naranja); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 18px; color: #fff; flex-shrink: 0; }
+.pc-nombre { font-size: 15px; font-weight: 600; color: var(--blanco); margin-bottom: 4px; }
+.pc-roles { display: flex; flex-wrap: wrap; gap: 5px; }
+.pc-rol { font-size: 10px; font-weight: 600; background: rgba(224,92,26,0.15); color: #ffb899; padding: 2px 8px; border-radius: 100px; letter-spacing: .3px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--negro); border-top: 1px solid var(--borde-oscuro);
+  padding: 52px var(--pad) 24px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+}
+.footer-logo-txt { font-size: 18px; font-weight: 600; color: var(--blanco); margin-bottom: 4px; }
+.footer-logo-txt span { color: var(--naranja); }
+.footer-logo-sub { font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+.footer-desc { font-size: 12px; color: rgba(255,255,255,0.3); line-height: 1.6; max-width: 240px; font-weight: 300; }
+.footer-col-titulo { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 9px; }
+.footer-col ul li a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 13px; transition: color .2s; }
+.footer-col ul li a:hover { color: var(--blanco); }
+.footer-bottom { grid-column: 1/-1; border-top: 1px solid var(--borde-oscuro); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.2); }
+.footer-credit { font-size: 11px; color: var(--naranja); opacity: .45; }
+
+/* ── ANIMACIONES ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.hero-left { animation: fadeUp .7s ease both; }
+.hero-right { animation: fadeUp .7s ease .18s both; }
+
+/* ══════════════════
+   RESPONSIVE
+══════════════════ */
+@media (max-width: 960px) {
+  .stats { grid-template-columns: repeat(2,1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.15); }
+  .stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.15); border-right: none; }
+  .servicios-grid { grid-template-columns: repeat(2,1fr); }
+  .portfolio-grid { grid-template-columns: repeat(2,1fr); }
+  footer { grid-template-columns: 1fr 1fr; }
+  footer > div:first-child { grid-column: span 2; }
+  .footer-bottom { grid-column: span 2; }
+}
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { min-height: 280px; border-left: none; border-top: 1px solid var(--borde-oscuro); }
+  .servicios-grid { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .presupuesto-wrap { grid-template-columns: 1fr; }
+  .zona-grid { grid-template-columns: 1fr; }
+  .contacto-grid { grid-template-columns: 1fr; }
+  footer { grid-template-columns: 1fr; }
+  footer > div:first-child { grid-column: span 1; }
+  .footer-bottom { grid-column: span 1; flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .hero-titulo { font-size: 38px; }
+  .hero-btns { flex-direction: column; }
+  .btn-primary, .btn-outline { text-align: center; }
+  .form-row { grid-template-columns: 1fr; }
+  .seccion { padding: 60px var(--pad); }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icono">🏗️</div>
+    <span class="nav-logo-txt">Servi<span>House</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#portfolio">Proyectos</a></li>
+    <li><a href="#zona">Cobertura</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#presupuesto" class="nav-cta">Pedir presupuesto</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="#portfolio" onclick="closeMenu()">Proyectos</a>
+  <a href="#zona" onclick="closeMenu()">Cobertura</a>
+  <a href="#contacto" onclick="closeMenu()">Contacto</a>
+  <a href="#presupuesto" onclick="closeMenu()">Pedir presupuesto →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-credenciales">
+      <div class="credencial destacada"><div class="credencial-dot"></div>Maestro Mayor de Obra</div>
+      <div class="credencial destacada"><div class="credencial-dot"></div>Gasista Matriculado</div>
+      <div class="credencial"><div class="credencial-dot"></div>Técnico en Refrigeración</div>
+    </div>
+    <h1 class="hero-titulo">Construcción,<br>gas y frío <em>en una sola mano</em></h1>
+    <div class="hero-nombre">Carlos Javier Soto · Córdoba</div>
+    <p class="hero-desc">Planificación, ejecución y seguimiento de obras. Instalaciones de gas habilitadas. Refrigeración y climatización. Todo con presupuesto sin cargo y facturación oficial.</p>
+    <div class="hero-btns">
+      <a href="#presupuesto" class="btn-primary">Pedir presupuesto</a>
+      <a href="https://wa.me/5493482257895?text=Hola%20ServiHouse!%20Necesito%20un%20presupuesto." class="btn-outline">💬 WhatsApp</a>
+    </div>
+    <div class="hero-chips">
+      <div class="hero-chip">Presupuesto sin cargo</div>
+      <div class="hero-chip">Facturación A y B</div>
+      <div class="hero-chip">Matrícula habilitada</div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="perfil-card">
+      <div class="perfil-avatar">CJ</div>
+      <div class="perfil-nombre">Carlos Javier Soto</div>
+      <div class="perfil-sub">Córdoba Capital y alrededores</div>
+      <div class="perfil-roles">
+        <div class="perfil-rol">
+          <div class="perfil-rol-icono">🏗️</div>
+          <div>
+            <div class="perfil-rol-txt">Maestro Mayor de Obra</div>
+            <div class="perfil-rol-sub">Planificación · Ejecución · Seguimiento</div>
+          </div>
+        </div>
+        <div class="perfil-rol">
+          <div class="perfil-rol-icono">🔥</div>
+          <div>
+            <div class="perfil-rol-txt">Gasista Matriculado</div>
+            <div class="perfil-rol-sub">Instalaciones habilitadas · Certificados</div>
+          </div>
+        </div>
+        <div class="perfil-rol">
+          <div class="perfil-rol-icono">❄️</div>
+          <div>
+            <div class="perfil-rol-txt">Técnico en Refrigeración</div>
+            <div class="perfil-rol-sub">Aires · Heladeras · Climatización</div>
+          </div>
+        </div>
+      </div>
+      <div class="perfil-disponible">
+        <div class="perfil-disp-txt">Disponible para presupuestar</div>
+        <div class="perfil-disp-dot"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-num">+150</div>
+    <div class="stat-label">Obras realizadas</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">3</div>
+    <div class="stat-label">Especialidades</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Con factura</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">15+</div>
+    <div class="stat-label">Años de experiencia</div>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section class="seccion fondo" id="servicios">
+  <div class="sec-header">
+    <div>
+      <div class="sec-eyebrow">Lo que hago</div>
+      <h2 class="sec-titulo">Servicios</h2>
+    </div>
+    <a href="#presupuesto" class="sec-link">Pedir presupuesto</a>
+  </div>
+  <div class="servicios-grid">
+    <div class="servicio-card">
+      <span class="servicio-icono">🏗️</span>
+      <div class="servicio-nombre">Planificación de obras</div>
+      <div class="servicio-desc">Estudio de factibilidad, elaboración de planos, presupuesto detallado y cronograma de trabajo antes de iniciar cualquier obra.</div>
+      <div class="servicio-tags"><span class="stag">Planos</span><span class="stag">Presupuesto</span><span class="stag">Cronograma</span></div>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icono">🧱</span>
+      <div class="servicio-nombre">Ejecución de obras</div>
+      <div class="servicio-desc">Construcción de viviendas, ampliaciones, refacciones y obras comerciales. Dirección técnica con cumplimiento de normativa vigente.</div>
+      <div class="servicio-tags"><span class="stag">Viviendas</span><span class="stag">Ampliaciones</span><span class="stag">Comercial</span></div>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icono">📋</span>
+      <div class="servicio-nombre">Seguimiento de obras</div>
+      <div class="servicio-desc">Supervisión técnica de obras en ejecución. Informes periódicos de avance, control de calidad y certificación de etapas.</div>
+      <div class="servicio-tags"><span class="stag">Supervisión</span><span class="stag">Informes</span><span class="stag">Certificación</span></div>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icono">🔥</span>
+      <div class="servicio-nombre">Instalaciones de gas</div>
+      <div class="servicio-desc">Instalación, ampliación y reparación de redes de gas natural y envasado. Habilitaciones y certificados oficiales como gasista matriculado.</div>
+      <div class="servicio-tags"><span class="stag">Matriculado</span><span class="stag">Habilitación</span><span class="stag">Gas natural</span></div>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icono">❄️</span>
+      <div class="servicio-nombre">Refrigeración y aires</div>
+      <div class="servicio-desc">Instalación y reparación de aires acondicionados, heladeras comerciales y sistemas de climatización en obras nuevas y existentes.</div>
+      <div class="servicio-tags"><span class="stag">Split</span><span class="stag">Comercial</span><span class="stag">Carga de gas</span></div>
+    </div>
+    <div class="servicio-card">
+      <span class="servicio-icono">📐</span>
+      <div class="servicio-nombre">Lectura de planos</div>
+      <div class="servicio-desc">Interpretación y elaboración de planos arquitectónicos y de instalaciones para trámites municipales, permisos y gestiones.</div>
+      <div class="servicio-tags"><span class="stag">Planos</span><span class="stag">Trámites</span><span class="stag">Permisos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="seccion oscuro" id="portfolio">
+  <div class="sec-header">
+    <div>
+      <div class="sec-eyebrow claro">Trabajos realizados</div>
+      <h2 class="sec-titulo claro">Proyectos</h2>
+    </div>
+    <a href="#presupuesto" class="sec-link">Consultar</a>
+  </div>
+  <div class="portfolio-grid">
+    <div class="proyecto-card">
+      <div class="proyecto-imagen"><span>🏠</span></div>
+      <div class="proyecto-body">
+        <div class="proyecto-tipo">Construcción</div>
+        <div class="proyecto-nombre">Vivienda unifamiliar — Villa Allende</div>
+        <div class="proyecto-detalle">140 m² · Dirección técnica completa · 2025</div>
+      </div>
+    </div>
+    <div class="proyecto-card">
+      <div class="proyecto-imagen"><span>🏢</span></div>
+      <div class="proyecto-body">
+        <div class="proyecto-tipo">Ampliación comercial</div>
+        <div class="proyecto-nombre">Local gastronómico — Córdoba Capital</div>
+        <div class="proyecto-detalle">85 m² · Gas + refrigeración + obra civil · 2025</div>
+      </div>
+    </div>
+    <div class="proyecto-card">
+      <div class="proyecto-imagen"><span>🔥</span></div>
+      <div class="proyecto-body">
+        <div class="proyecto-tipo">Instalación de gas</div>
+        <div class="proyecto-nombre">Red de gas — Barrio Residencial</div>
+        <div class="proyecto-detalle">12 unidades · Habilitación municipal · 2024</div>
+      </div>
+    </div>
+    <div class="proyecto-card">
+      <div class="proyecto-imagen"><span>❄️</span></div>
+      <div class="proyecto-body">
+        <div class="proyecto-tipo">Refrigeración</div>
+        <div class="proyecto-nombre">Sistema de climatización — Oficinas</div>
+        <div class="proyecto-detalle">8 equipos split · Córdoba Capital · 2024</div>
+      </div>
+    </div>
+    <div class="proyecto-card">
+      <div class="proyecto-imagen"><span>🧱</span></div>
+      <div class="proyecto-body">
+        <div class="proyecto-tipo">Refacción</div>
+        <div class="proyecto-nombre">Ampliación y refacción — La Calera</div>
+        <div class="proyecto-detalle">60 m² · Planos + ejecución · 2024</div>
+      </div>
+    </div>
+    <div class="proyecto-card">
+      <div class="proyecto-imagen"><span>📋</span></div>
+      <div class="proyecto-body">
+        <div class="proyecto-tipo">Seguimiento</div>
+        <div class="proyecto-nombre">Supervisión de obra — Río Ceballos</div>
+        <div class="proyecto-detalle">Vivienda 180 m² · Control de etapas · 2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESUPUESTO -->
+<section class="presupuesto-wrap" id="presupuesto">
+  <div class="presupuesto-info">
+    <div class="sec-eyebrow">Sin compromiso</div>
+    <h2 class="sec-titulo">Pedí tu presupuesto</h2>
+    <p class="presupuesto-desc">El presupuesto es gratuito y sin compromiso. Te respondo en el día con una evaluación detallada de tu proyecto.</p>
+    <div class="beneficios">
+      <div class="beneficio"><div class="beneficio-check">✓</div>Presupuesto detallado sin cargo</div>
+      <div class="beneficio"><div class="beneficio-check">✓</div>Factura A o B según necesidad</div>
+      <div class="beneficio"><div class="beneficio-check">✓</div>Matrícula habilitada — Gas y Obras</div>
+      <div class="beneficio"><div class="beneficio-check">✓</div>Garantía escrita en todos los trabajos</div>
+      <div class="beneficio"><div class="beneficio-check">✓</div>Seguimiento permanente de la obra</div>
+    </div>
+  </div>
+  <div class="presupuesto-form-wrap">
+    <div class="form-titulo">Solicitar presupuesto</div>
+    <div class="form-sub">Completá los datos y te respondo en el día.</div>
+    <div class="form-row">
+      <div class="form-grupo">
+        <label>Nombre</label>
+        <input id="p-nombre" type="text" placeholder="María García">
+      </div>
+      <div class="form-grupo">
+        <label>WhatsApp</label>
+        <input id="p-telefono" type="tel" placeholder="351 XXXXXXX">
+      </div>
+    </div>
+    <div class="form-grupo">
+      <label>Tipo de servicio</label>
+      <select id="p-servicio">
+        <option value="">Seleccioná el servicio</option>
+        <option>Planificación de obra</option>
+        <option>Ejecución de obra nueva</option>
+        <option>Ampliación o refacción</option>
+        <option>Seguimiento de obra</option>
+        <option>Instalación de gas</option>
+        <option>Reparación / habilitación de gas</option>
+        <option>Instalación de aires acondicionados</option>
+        <option>Reparación de refrigeración</option>
+        <option>Lectura / elaboración de planos</option>
+        <option>Varios servicios combinados</option>
+      </select>
+    </div>
+    <div class="form-grupo">
+      <label>Ubicación del trabajo</label>
+      <input id="p-ubicacion" type="text" placeholder="Barrio, localidad — Córdoba">
+    </div>
+    <div class="form-grupo">
+      <label>Descripción del proyecto</label>
+      <textarea id="p-descripcion" placeholder="Contame brevemente qué necesitás hacer..."></textarea>
+    </div>
+    <div class="factura-badge">🧾 Emito factura A o B — indicalo si lo necesitás</div>
+    <button class="btn-form" onclick="enviarPresupuesto()">Enviar por WhatsApp</button>
+    <a href="https://wa.me/5493482257895?text=Hola%20ServiHouse!%20Quiero%20consultar%20sobre%20un%20trabajo." class="btn-wsp-form">💬 Escribir directo por WhatsApp</a>
+  </div>
+</section>
+
+<!-- ZONA -->
+<section class="seccion blanco" id="zona">
+  <div class="sec-eyebrow">Dónde trabajo</div>
+  <h2 class="sec-titulo">Zona de cobertura</h2>
+  <p class="sec-desc">Trabajo en Córdoba Capital y toda el área metropolitana. Para proyectos más alejados consultame — evalúo cada caso.</p>
+  <div class="zona-grid">
+    <div class="zona-lista">
+      <div class="zona-item principal">
+        <div class="zona-nombre">📍 Córdoba Capital <span style="font-size:10px;background:var(--naranja-claro);color:var(--naranja);padding:2px 8px;border-radius:2px;font-weight:700">BASE</span></div>
+        <div class="zona-dist">Sede</div>
+      </div>
+      <div class="zona-item"><div class="zona-nombre">📍 Villa Allende</div><div class="zona-dist">~18 km</div></div>
+      <div class="zona-item"><div class="zona-nombre">📍 Mendiolaza</div><div class="zona-dist">~22 km</div></div>
+      <div class="zona-item"><div class="zona-nombre">📍 Río Ceballos</div><div class="zona-dist">~28 km</div></div>
+      <div class="zona-item"><div class="zona-nombre">📍 La Calera</div><div class="zona-dist">~14 km</div></div>
+      <div class="zona-item"><div class="zona-nombre">📍 Unquillo</div><div class="zona-dist">~24 km</div></div>
+      <div class="zona-item"><div class="zona-nombre">📍 Otras zonas — consultá</div><div class="zona-dist">A coordinar</div></div>
+    </div>
+    <div class="zona-cards">
+      <div class="zona-card">
+        <div class="zona-card-icono">🏠</div>
+        <div>
+          <div class="zona-card-titulo">Obras en domicilio</div>
+          <div class="zona-card-txt">Me traslado a la ubicación de la obra para evaluación, presupuesto y ejecución. Sin cargo adicional en zona Gran Córdoba.</div>
+        </div>
+      </div>
+      <div class="zona-card">
+        <div class="zona-card-icono">📋</div>
+        <div>
+          <div class="zona-card-titulo">Trámites y habilitaciones</div>
+          <div class="zona-card-txt">Gestión de permisos municipales, habilitaciones de gas y certificaciones de obra ante los organismos correspondientes en Córdoba.</div>
+        </div>
+      </div>
+      <div class="zona-card">
+        <div class="zona-card-icono">⚡</div>
+        <div>
+          <div class="zona-card-titulo">Proyectos fuera del radio</div>
+          <div class="zona-card-txt">Para obras en localidades más alejadas coordinamos según el proyecto. Consultame con los detalles y te doy una respuesta concreta.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="seccion oscuro" id="contacto">
+  <div class="sec-eyebrow claro">Hablemos</div>
+  <h2 class="sec-titulo claro">Contacto</h2>
+  <p class="sec-desc claro">La forma más rápida es por WhatsApp. También podés escribirme por email o llamar en horario de atención.</p>
+  <div class="contacto-grid">
+    <div class="contacto-lado">
+      <a href="https://wa.me/5493482257895" class="wsp-card">
+        <span class="wsp-icono">💬</span>
+        <div>
+          <div class="wsp-titulo">WhatsApp directo</div>
+          <div class="wsp-sub">+54 9 3482 257895 · Respuesta rápida</div>
+        </div>
+      </a>
+      <div class="contacto-card">
+        <div class="c-icono">📍</div>
+        <div>
+          <div class="c-label">Ubicación</div>
+          <div class="c-valor">Córdoba Capital, Córdoba</div>
+          <div class="c-sub">Atención en toda el área metropolitana</div>
+        </div>
+      </div>
+      <div class="contacto-card">
+        <div class="c-icono">🕐</div>
+        <div>
+          <div class="c-label">Horarios</div>
+          <div class="c-valor">Lun a Vie 8:00 – 18:00 hs</div>
+          <div class="c-sub">Sábados 8:00 – 13:00 hs</div>
+        </div>
+      </div>
+      <div class="contacto-card">
+        <div class="c-icono">🧾</div>
+        <div>
+          <div class="c-label">Facturación</div>
+          <div class="c-valor">Factura A y B disponible</div>
+          <div class="c-sub">Indicalo al momento de pedir presupuesto</div>
+        </div>
+      </div>
+    </div>
+    <div class="contacto-lado">
+      <div class="perfil-contacto">
+        <div class="pc-avatar">CJ</div>
+        <div>
+          <div class="pc-nombre">Carlos Javier Soto</div>
+          <div class="pc-roles">
+            <span class="pc-rol">Maestro Mayor de Obra</span>
+            <span class="pc-rol">Gasista Matriculado</span>
+            <span class="pc-rol">Técnico en Refrigeración</span>
+          </div>
+        </div>
+      </div>
+      <div class="contacto-card" style="cursor:default">
+        <div class="c-icono">🗺️</div>
+        <div>
+          <div class="c-label">Zona de trabajo</div>
+          <div class="c-valor">Córdoba Capital y Gran Córdoba</div>
+          <div class="c-sub">Villa Allende · Mendiolaza · Río Ceballos · La Calera · Unquillo</div>
+        </div>
+      </div>
+      <div class="contacto-card" style="cursor:default">
+        <div class="c-icono">📜</div>
+        <div>
+          <div class="c-label">Habilitaciones</div>
+          <div class="c-valor">Matrícula profesional vigente</div>
+          <div class="c-sub">Gas · Obras civiles · Refrigeración</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo-txt">Servi<span>House</span></div>
+    <div class="footer-logo-sub">Carlos Javier Soto · Córdoba</div>
+    <p class="footer-desc">Maestro Mayor de Obra, Gasista Matriculado y Técnico en Refrigeración. Córdoba Capital y alrededores. Presupuesto sin cargo.</p>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Servicios</div>
+    <ul>
+      <li><a href="#">Obras y construcción</a></li>
+      <li><a href="#">Instalaciones de gas</a></li>
+      <li><a href="#">Refrigeración</a></li>
+      <li><a href="#">Planos y trámites</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Contacto</div>
+    <ul>
+      <li><a href="#">WhatsApp</a></li>
+      <li><a href="#">Presupuesto</a></li>
+      <li><a href="#">Zona de cobertura</a></li>
+      <li><a href="#">Proyectos</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 ServiHouse — Carlos Javier Soto · Córdoba Capital · Todos los derechos reservados</span>
+    <span class="footer-credit">Diseño web · Tu nombre acá</span>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.querySelector('.hamburger');
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+
+  function enviarPresupuesto() {
+    const nombre      = document.getElementById('p-nombre').value.trim();
+    const telefono    = document.getElementById('p-telefono').value.trim();
+    const servicio    = document.getElementById('p-servicio').value;
+    const ubicacion   = document.getElementById('p-ubicacion').value.trim();
+    const descripcion = document.getElementById('p-descripcion').value.trim();
+
+    if (!servicio && !descripcion) {
+      alert('Por favor seleccioná el tipo de servicio y describí tu proyecto.');
+      return;
+    }
+
+    let msg = `Hola ServiHouse! 🏗️ Solicito un presupuesto.\n\n`;
+    if (nombre)      msg += `👤 *Nombre:* ${nombre}\n`;
+    if (telefono)    msg += `📱 *WhatsApp:* ${telefono}\n`;
+    if (servicio)    msg += `🔧 *Servicio:* ${servicio}\n`;
+    if (ubicacion)   msg += `📍 *Ubicación:* ${ubicacion}\n`;
+    if (descripcion) msg += `📋 *Descripción:* ${descripcion}\n`;
+    msg += `\n¿Podés darme un presupuesto? ¡Gracias!`;
+
+    window.open(`https://wa.me/5493482257895?text=${encodeURIComponent(msg)}`, '_blank');
+  }
+</script>
+</body>
+</html>

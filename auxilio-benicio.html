@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>Auxilio Benicio | Servicio de Auxilio y Grúa — Las Breñas, Chaco</title>
+<meta name="description" content="Auxilio en ruta las 24hs en Las Breñas y zona, Chaco. Camioneta con trailer para autos, camionetas, camiones y maquinaria. Contacto: Livio Rodriguez.">
+<meta name="keywords" content="auxilio en ruta Las Breñas, grúa Chaco, auxilio mecánico Las Breñas, remolque vehículo Chaco, auxilio 24 horas Las Breñas, trailer grúa Chaco">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.auxiliobenicio.com.ar/">
+<meta property="og:title" content="Auxilio Benicio | Las Breñas, Chaco — 24hs">
+<meta property="og:description" content="Auxilio en ruta las 24hs. Camioneta con trailer. Todo tipo de vehículos. Las Breñas y zona, Chaco.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Auxilio Benicio",
+  "description": "Servicio de auxilio en ruta y remolque con trailer en Las Breñas y zona, Chaco. Todo tipo de vehículos.",
+  "url": "https://www.auxiliobenicio.com.ar",
+  "telephone": "+54-9-3482-257895",
+  "openingHours": "Mo-Su 00:00-23:59",
+  "areaServed": ["Las Breñas", "Charata", "Gancedo", "Corzuela", "Chaco"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Las Breñas",
+    "addressRegion": "Chaco",
+    "addressCountry": "AR"
+  },
+  "employee": {
+    "@type": "Person",
+    "name": "Livio Rodriguez",
+    "jobTitle": "Auxiliador en ruta"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --negro: #0a0a0a;
+  --negro2: #111111;
+  --negro3: #181818;
+  --amarillo: #fbbf00;
+  --amarillo2: #e5ac00;
+  --amarillo-claro: #fffbe6;
+  --rojo: #dc2626;
+  --rojo-claro: #fee2e2;
+  --blanco: #f5f5f5;
+  --gris: #888;
+  --borde: rgba(255,255,255,0.08);
+  --display: 'Bebas Neue', sans-serif;
+  --cuerpo: 'Barlow', sans-serif;
+  --pad: clamp(20px, 5vw, 60px);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--negro); color: var(--blanco); font-family: var(--cuerpo); overflow-x: hidden; }
+
+/* ── BARRA DE EMERGENCIA ── */
+.barra-emergencia {
+  background: var(--rojo); padding: 10px var(--pad);
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+  flex-wrap: wrap;
+}
+.barra-emergencia-txt {
+  font-family: var(--display); font-size: 16px; letter-spacing: 2px;
+  color: #fff; text-transform: uppercase;
+}
+.barra-emergencia-num {
+  background: #fff; color: var(--rojo); font-family: var(--display);
+  font-size: 18px; letter-spacing: 2px; padding: 4px 16px; border-radius: 3px;
+  text-decoration: none; transition: all .2s; display: inline-block;
+}
+.barra-emergencia-num:hover { background: var(--amarillo); color: var(--negro); }
+.barra-pulso { width: 8px; height: 8px; border-radius: 50%; background: #fff; animation: pulso 1s infinite; flex-shrink: 0; }
+@keyframes pulso { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(10,10,10,0.97); backdrop-filter: blur(14px);
+  border-bottom: 2px solid var(--amarillo);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--pad); height: 58px;
+}
+
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-icono { font-size: 24px; }
+.nav-logo-txt { font-family: var(--display); font-size: 22px; letter-spacing: 2px; color: var(--blanco); text-transform: uppercase; }
+.nav-logo-txt span { color: var(--amarillo); }
+
+.nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+.nav-links a { color: var(--gris); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: color .2s; }
+.nav-links a:hover { color: var(--blanco); }
+.nav-cta {
+  background: var(--amarillo) !important; color: var(--negro) !important;
+  padding: 8px 20px; border-radius: 3px; font-weight: 700 !important;
+  display: flex !important; align-items: center; gap: 6px;
+}
+.nav-cta:hover { background: var(--amarillo2) !important; }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--blanco); }
+
+.mobile-menu {
+  display: none; position: fixed; top: 100px; left: 0; right: 0; z-index: 199;
+  background: rgba(10,10,10,0.99); border-bottom: 2px solid var(--amarillo);
+  padding: 20px var(--pad) 28px; flex-direction: column;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { color: var(--gris); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 13px 0; border-bottom: 1px solid var(--borde); transition: color .2s; }
+.mobile-menu a:last-child { border-bottom: none; color: var(--amarillo); margin-top: 6px; }
+.mobile-menu a:hover { color: var(--blanco); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 92svh; background: var(--negro2);
+  display: grid; grid-template-columns: 1fr 1fr;
+  position: relative; overflow: hidden;
+}
+
+/* Líneas diagonales de fondo */
+.hero-fondo {
+  position: absolute; inset: 0; z-index: 0;
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent, transparent 28px,
+    rgba(251,191,0,0.03) 28px, rgba(251,191,0,0.03) 30px
+  );
+}
+
+.hero-left {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 60px var(--pad);
+}
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--rojo); color: #fff;
+  padding: 7px 16px; border-radius: 3px;
+  font-family: var(--display); font-size: 13px; letter-spacing: 3px;
+  text-transform: uppercase; margin-bottom: 24px; width: fit-content;
+}
+
+.hero-titulo {
+  font-family: var(--display); font-size: clamp(52px, 7.5vw, 100px);
+  line-height: .92; text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.hero-titulo .amarillo { color: var(--amarillo); display: block; }
+.hero-titulo .outline {
+  -webkit-text-stroke: 2px rgba(255,255,255,0.2);
+  color: transparent; display: block;
+}
+
+.hero-desc { font-size: 15px; line-height: 1.7; color: var(--gris); max-width: 420px; margin-bottom: 36px; font-weight: 400; }
+
+/* BOTÓN GRANDE DE LLAMADA */
+.btn-emergencia {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--amarillo); color: var(--negro);
+  padding: 16px 28px; border-radius: 4px; text-decoration: none;
+  font-family: var(--display); font-size: 20px; letter-spacing: 2px;
+  text-transform: uppercase; font-weight: 400;
+  transition: all .2s; margin-bottom: 12px; width: fit-content;
+  box-shadow: 0 0 0 0 rgba(251,191,0,0.4);
+  animation: ring 2s infinite;
+}
+@keyframes ring {
+  0%,100%{ box-shadow: 0 0 0 0 rgba(251,191,0,0.4); }
+  50%{ box-shadow: 0 0 0 14px rgba(251,191,0,0); }
+}
+.btn-emergencia:hover { background: var(--amarillo2); transform: scale(1.02); }
+.btn-emergencia-icono { font-size: 24px; }
+
+.btn-wsp {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #25d366; color: #fff; padding: 13px 24px;
+  border-radius: 4px; text-decoration: none; font-family: var(--display);
+  font-size: 16px; letter-spacing: 1px; text-transform: uppercase;
+  transition: all .2s; width: fit-content;
+}
+.btn-wsp:hover { background: #20bc5a; }
+
+.hero-chips { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.hero-chip {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.55);
+}
+.hero-chip::before { content: '✓'; color: var(--amarillo); font-weight: 700; }
+
+/* HERO RIGHT */
+.hero-right {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px; background: rgba(0,0,0,0.3);
+  border-left: 1px solid var(--borde);
+}
+
+.info-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px; padding: 28px; width: 100%; max-width: 320px;
+}
+
+.info-card-titulo {
+  font-family: var(--display); font-size: 12px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gris); margin-bottom: 20px;
+  display: flex; align-items: center; gap: 8px;
+}
+.info-card-titulo::before { content: ''; width: 20px; height: 2px; background: var(--amarillo); }
+
+.operador-row {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 20px;
+  padding-bottom: 20px; border-bottom: 1px solid var(--borde);
+}
+.operador-avatar {
+  width: 52px; height: 52px; border-radius: 10px; background: var(--amarillo);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-size: 20px; color: var(--negro); flex-shrink: 0;
+}
+.operador-nombre { font-size: 16px; font-weight: 700; color: var(--blanco); }
+.operador-rol { font-size: 12px; color: var(--gris); margin-top: 2px; }
+.operador-online { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #4ade80; margin-top: 4px; font-weight: 600; }
+.operador-online::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #4ade80; }
+
+.equipo-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--borde); }
+.equipo-item:last-child { border-bottom: none; }
+.equipo-icono { font-size: 22px; flex-shrink: 0; }
+.equipo-txt { font-size: 13px; font-weight: 600; color: var(--blanco); }
+.equipo-sub { font-size: 11px; color: var(--gris); margin-top: 2px; }
+
+.disponible-box {
+  margin-top: 18px; background: rgba(251,191,0,0.1);
+  border: 1px solid rgba(251,191,0,0.3); border-radius: 6px;
+  padding: 12px 14px; display: flex; justify-content: space-between; align-items: center;
+}
+.disp-txt { font-family: var(--display); font-size: 13px; letter-spacing: 2px; color: var(--amarillo); text-transform: uppercase; }
+.disp-val { font-family: var(--display); font-size: 20px; color: var(--blanco); }
+
+/* ── STATS ── */
+.stats {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  background: var(--amarillo); border-top: 3px solid var(--amarillo2);
+}
+.stat-item { padding: 22px var(--pad); border-right: 1px solid rgba(0,0,0,0.1); text-align: center; }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: var(--display); font-size: clamp(32px,4vw,52px); color: var(--negro); line-height: 1; margin-bottom: 3px; }
+.stat-label { font-size: 11px; color: rgba(0,0,0,0.55); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; }
+
+/* ── SECCIONES ── */
+.seccion { padding: 84px var(--pad); }
+.seccion.fondo { background: var(--negro2); }
+.seccion.fondo2 { background: var(--negro3); }
+
+.sec-eyebrow {
+  font-family: var(--display); font-size: 12px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--amarillo); margin-bottom: 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+.sec-eyebrow::before { content: '//'; color: var(--gris); }
+
+.sec-titulo { font-family: var(--display); font-size: clamp(32px,4.5vw,58px); text-transform: uppercase; color: var(--blanco); line-height: .95; margin-bottom: 14px; letter-spacing: 1px; }
+
+.sec-desc { font-size: 15px; color: var(--gris); max-width: 540px; margin-bottom: 48px; line-height: 1.7; }
+
+.sec-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 16px; }
+.sec-link { font-family: var(--display); font-size: 13px; color: var(--amarillo); text-decoration: none; display: flex; align-items: center; gap: 6px; letter-spacing: 1px; text-transform: uppercase; transition: gap .2s; }
+.sec-link:hover { gap: 12px; }
+.sec-link::after { content: '→'; }
+
+/* ── SERVICIOS ── */
+.servicios-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--borde); }
+
+.servicio-item {
+  background: var(--negro2); padding: 28px 24px;
+  border-top: 3px solid transparent; transition: all .2s;
+}
+.servicio-item:hover { background: var(--negro3); border-top-color: var(--amarillo); }
+
+.servicio-icono { font-size: 36px; margin-bottom: 14px; display: block; }
+.servicio-nombre { font-family: var(--display); font-size: 22px; text-transform: uppercase; color: var(--blanco); letter-spacing: 1px; margin-bottom: 8px; }
+.servicio-desc { font-size: 13px; color: var(--gris); line-height: 1.6; margin-bottom: 16px; }
+.servicio-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.stag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; background: rgba(251,191,0,0.1); color: var(--amarillo); border: 1px solid rgba(251,191,0,0.2); }
+
+/* ── VIAJES / SERVICIOS REALIZADOS ── */
+.viajes-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+
+.viaje-card {
+  background: var(--negro2); border: 1px solid var(--borde);
+  border-radius: 8px; overflow: hidden; transition: all .2s; cursor: default;
+}
+.viaje-card:hover { border-color: rgba(251,191,0,0.3); transform: translateY(-2px); }
+
+.viaje-imagen {
+  height: 140px; background: var(--negro3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 52px; position: relative; overflow: hidden;
+}
+.viaje-imagen::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.6)); }
+
+.viaje-body { padding: 16px; }
+.viaje-tipo {
+  display: inline-block; font-family: var(--display); font-size: 10px;
+  font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 2px; margin-bottom: 8px;
+}
+.tipo-remolque { background: rgba(251,191,0,0.15); color: var(--amarillo); }
+.tipo-auxilio { background: rgba(220,38,38,0.15); color: #f87171; }
+.tipo-rescate { background: rgba(34,197,94,0.15); color: #4ade80; }
+
+.viaje-titulo { font-size: 14px; font-weight: 700; color: var(--blanco); margin-bottom: 5px; line-height: 1.3; }
+.viaje-detalle { font-size: 12px; color: var(--gris); display: flex; align-items: center; gap: 5px; }
+
+/* ── ZONA ── */
+.zona-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; align-items: start; }
+
+.zona-lista { display: flex; flex-direction: column; gap: 8px; }
+.zona-item {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--negro3); border: 1px solid var(--borde);
+  border-radius: 6px; padding: 13px 16px; transition: all .2s;
+  border-left: 3px solid transparent;
+}
+.zona-item:hover { border-left-color: var(--amarillo); }
+.zona-item.principal { border-left-color: var(--amarillo); background: rgba(251,191,0,0.06); }
+.zona-nombre { font-size: 14px; font-weight: 600; color: var(--blanco); display: flex; align-items: center; gap: 8px; }
+.zona-dist { font-family: var(--display); font-size: 13px; color: var(--gris); letter-spacing: 1px; }
+
+.zona-cards { display: flex; flex-direction: column; gap: 12px; }
+.zona-info-card {
+  background: var(--negro3); border: 1px solid var(--borde);
+  border-radius: 8px; padding: 18px; display: flex; gap: 12px; align-items: flex-start;
+}
+.zi-icono { font-size: 22px; flex-shrink: 0; }
+.zi-titulo { font-size: 14px; font-weight: 700; color: var(--blanco); margin-bottom: 4px; }
+.zi-txt { font-size: 13px; color: var(--gris); line-height: 1.5; }
+
+/* ── CONTACTO ── */
+.contacto-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 48px; }
+
+.contacto-lado { display: flex; flex-direction: column; gap: 12px; }
+
+.btn-llamar-grande {
+  background: var(--amarillo); color: var(--negro);
+  border-radius: 6px; padding: 22px 24px;
+  display: flex; align-items: center; gap: 14px;
+  text-decoration: none; transition: all .2s;
+  animation: ring 2.5s infinite;
+}
+.btn-llamar-grande:hover { background: var(--amarillo2); transform: scale(1.01); }
+.btn-llamar-icono { font-size: 32px; flex-shrink: 0; }
+.btn-llamar-titulo { font-family: var(--display); font-size: 20px; letter-spacing: 2px; color: var(--negro); text-transform: uppercase; }
+.btn-llamar-sub { font-size: 12px; color: rgba(0,0,0,0.55); margin-top: 2px; font-weight: 600; }
+
+.btn-wsp-grande {
+  background: #25d366; color: #fff;
+  border-radius: 6px; padding: 18px 24px;
+  display: flex; align-items: center; gap: 14px;
+  text-decoration: none; transition: background .2s;
+}
+.btn-wsp-grande:hover { background: #20bc5a; }
+.btn-wsp-grande-icono { font-size: 28px; flex-shrink: 0; }
+.btn-wsp-grande-titulo { font-size: 16px; font-weight: 700; color: #fff; }
+.btn-wsp-grande-sub { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 2px; }
+
+.contacto-card {
+  background: var(--negro3); border: 1px solid var(--borde);
+  border-radius: 6px; padding: 16px; display: flex; gap: 12px; align-items: flex-start;
+}
+.c-icono { font-size: 20px; flex-shrink: 0; }
+.c-label { font-family: var(--display); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gris); margin-bottom: 4px; }
+.c-valor { font-size: 14px; color: var(--blanco); font-weight: 600; }
+.c-sub { font-size: 12px; color: var(--gris); margin-top: 2px; }
+
+.operador-card {
+  background: var(--negro3); border: 1px solid var(--borde);
+  border-radius: 8px; padding: 18px; display: flex; gap: 14px; align-items: center;
+}
+.op-avatar { width: 48px; height: 48px; border-radius: 8px; background: var(--amarillo); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 18px; color: var(--negro); flex-shrink: 0; }
+.op-nombre { font-size: 15px; font-weight: 700; color: var(--blanco); }
+.op-rol { font-size: 12px; color: var(--gris); margin-top: 2px; }
+.op-base { font-size: 11px; color: var(--amarillo); margin-top: 4px; font-weight: 600; }
+
+/* ── FAQ ── */
+.faq-lista { display: flex; flex-direction: column; gap: 2px; max-width: 760px; }
+.faq-item { background: var(--negro3); border: 1px solid var(--borde); border-radius: 6px; overflow: hidden; }
+.faq-pregunta {
+  padding: 16px 20px; font-size: 15px; font-weight: 600; color: var(--blanco);
+  cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+  transition: background .2s; user-select: none;
+}
+.faq-pregunta:hover { background: rgba(251,191,0,0.05); }
+.faq-flecha { color: var(--amarillo); font-size: 18px; transition: transform .2s; flex-shrink: 0; }
+.faq-respuesta { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s; padding: 0 20px; font-size: 14px; color: var(--gris); line-height: 1.7; }
+.faq-item.abierto .faq-respuesta { max-height: 200px; padding: 0 20px 16px; }
+.faq-item.abierto .faq-flecha { transform: rotate(45deg); }
+
+/* ── FOOTER ── */
+footer {
+  background: #070707; border-top: 3px solid var(--amarillo);
+  padding: 48px var(--pad) 24px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+}
+.footer-logo-txt { font-family: var(--display); font-size: 22px; letter-spacing: 3px; color: var(--blanco); text-transform: uppercase; margin-bottom: 4px; }
+.footer-logo-txt span { color: var(--amarillo); }
+.footer-logo-sub { font-size: 11px; color: var(--gris); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; }
+.footer-desc { font-size: 12px; color: rgba(255,255,255,0.3); line-height: 1.6; max-width: 240px; }
+.footer-col-titulo { font-family: var(--display); font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 9px; }
+.footer-col ul li a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 13px; transition: color .2s; }
+.footer-col ul li a:hover { color: var(--blanco); }
+.footer-bottom { grid-column: 1/-1; border-top: 1px solid var(--borde); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.2); font-family: var(--display); letter-spacing: .5px; }
+.footer-credit { font-size: 11px; color: var(--amarillo); opacity: .4; font-family: var(--display); }
+
+/* ── ANIMACIONES ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.hero-left { animation: fadeUp .7s ease both; }
+.hero-right { animation: fadeUp .7s ease .18s both; }
+
+/* ══════════════════
+   RESPONSIVE
+══════════════════ */
+@media (max-width: 960px) {
+  .stats { grid-template-columns: repeat(2,1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-top: 1px solid rgba(0,0,0,0.1); }
+  .stat-item:nth-child(4) { border-top: 1px solid rgba(0,0,0,0.1); border-right: none; }
+  .servicios-grid { grid-template-columns: repeat(2,1fr); }
+  .viajes-grid { grid-template-columns: repeat(2,1fr); }
+  footer { grid-template-columns: 1fr 1fr; }
+  footer > div:first-child { grid-column: span 2; }
+  .footer-bottom { grid-column: span 2; }
+}
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { min-height: 280px; border-left: none; border-top: 1px solid var(--borde); }
+  .info-card { max-width: 100%; }
+  .servicios-grid { grid-template-columns: 1fr; }
+  .viajes-grid { grid-template-columns: 1fr; }
+  .zona-layout { grid-template-columns: 1fr; }
+  .contacto-layout { grid-template-columns: 1fr; }
+  footer { grid-template-columns: 1fr; }
+  footer > div:first-child { grid-column: span 1; }
+  .footer-bottom { grid-column: span 1; flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .hero-titulo { font-size: 48px; }
+  .btn-emergencia { width: 100%; justify-content: center; }
+  .btn-wsp { width: 100%; justify-content: center; }
+  .seccion { padding: 60px var(--pad); }
+  .barra-emergencia { flex-direction: column; gap: 8px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- BARRA DE EMERGENCIA -->
+<div class="barra-emergencia">
+  <div class="barra-pulso"></div>
+  <div class="barra-emergencia-txt">🚨 ¿Necesitás auxilio ahora?</div>
+  <a href="https://wa.me/5493482257895?text=🚨%20AUXILIO%20URGENTE%20—%20Necesito%20ayuda%20en%20ruta.%20¿Podés%20asistirme?" class="barra-emergencia-num">💬 WhatsApp urgente</a>
+  <div class="barra-pulso"></div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-icono">🛻</span>
+    <span class="nav-logo-txt">Auxilio <span>Benicio</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#viajes">Trabajos</a></li>
+    <li><a href="#zona">Zona</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="https://wa.me/5493482257895?text=Hola!%20Necesito%20auxilio." class="nav-cta">🚨 Llamar ahora</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="#viajes" onclick="closeMenu()">Trabajos</a>
+  <a href="#zona" onclick="closeMenu()">Zona de cobertura</a>
+  <a href="#contacto" onclick="closeMenu()">Contacto</a>
+  <a href="https://wa.me/5493482257895?text=🚨%20Necesito%20auxilio." onclick="closeMenu()">🚨 Llamar ahora →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-fondo"></div>
+  <div class="hero-left">
+    <div class="hero-badge"><div class="barra-pulso"></div> Servicio activo 24 horas</div>
+    <h1 class="hero-titulo">
+      <span class="outline">Auxilio</span>
+      <span class="amarillo">en ruta</span>
+      cuando lo necesitás
+    </h1>
+    <p class="hero-desc">Camioneta con trailer para todo tipo de vehículos. Remolque, rescate y asistencia en ruta en Las Breñas y toda la zona del Chaco.</p>
+    <a href="https://wa.me/5493482257895?text=🚨%20AUXILIO%20URGENTE%20—%20Necesito%20ayuda%20en%20ruta." class="btn-emergencia">
+      <span class="btn-emergencia-icono">🚨</span> Pedir auxilio ahora
+    </a>
+    <a href="https://wa.me/5493482257895" class="btn-wsp">
+      💬 WhatsApp — Livio Rodriguez
+    </a>
+    <div class="hero-chips">
+      <div class="hero-chip">Disponible 24hs</div>
+      <div class="hero-chip">Todo tipo de vehículos</div>
+      <div class="hero-chip">Trailer propio</div>
+      <div class="hero-chip">Respuesta rápida</div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="info-card">
+      <div class="info-card-titulo">Operador en servicio</div>
+      <div class="operador-row">
+        <div class="operador-avatar">LR</div>
+        <div>
+          <div class="operador-nombre">Livio Rodriguez</div>
+          <div class="operador-rol">Auxiliador en ruta</div>
+          <div class="operador-online">En servicio</div>
+        </div>
+      </div>
+      <div class="equipo-item">
+        <div class="equipo-icono">🚚</div>
+        <div>
+          <div class="equipo-txt">Camioneta con trailer</div>
+          <div class="equipo-sub">Equipada para todo tipo de vehículos</div>
+        </div>
+      </div>
+      <div class="equipo-item">
+        <div class="equipo-icono">📍</div>
+        <div>
+          <div class="equipo-txt">Base: Las Breñas, Chaco</div>
+          <div class="equipo-sub">Cobertura en toda la zona</div>
+        </div>
+      </div>
+      <div class="equipo-item">
+        <div class="equipo-icono">🔧</div>
+        <div>
+          <div class="equipo-txt">Autos · Camionetas · Camiones</div>
+          <div class="equipo-sub">Maquinaria y vehículos especiales</div>
+        </div>
+      </div>
+      <div class="disponible-box">
+        <div class="disp-txt">Disponible</div>
+        <div class="disp-val">24 / 7</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-num">24hs</div>
+    <div class="stat-label">Disponibilidad</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">+200</div>
+    <div class="stat-label">Servicios realizados</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Vehículos cubiertos</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">Rápido</div>
+    <div class="stat-label">Tiempo de respuesta</div>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section class="seccion fondo" id="servicios">
+  <div class="sec-header">
+    <div>
+      <div class="sec-eyebrow">Lo que hacemos</div>
+      <h2 class="sec-titulo">Servicios</h2>
+    </div>
+    <a href="https://wa.me/5493482257895" class="sec-link">Llamar ahora</a>
+  </div>
+  <div class="servicios-grid">
+    <div class="servicio-item">
+      <span class="servicio-icono">🚚</span>
+      <div class="servicio-nombre">Remolque con trailer</div>
+      <div class="servicio-desc">Traslado de vehículos inmovilizados sobre trailer. Autos, camionetas, camiones y maquinaria. Desde la ruta hasta el taller o destino indicado.</div>
+      <div class="servicio-tags"><span class="stag">Trailer</span><span class="stag">Todos los vehículos</span><span class="stag">Largo recorrido</span></div>
+    </div>
+    <div class="servicio-item">
+      <span class="servicio-icono">🔧</span>
+      <div class="servicio-nombre">Auxilio mecánico</div>
+      <div class="servicio-desc">Asistencia en el lugar para problemas mecánicos básicos: batería descargada, rueda pinchada, sin combustible y fallas menores en ruta.</div>
+      <div class="servicio-tags"><span class="stag">Batería</span><span class="stag">Rueda</span><span class="stag">Combustible</span></div>
+    </div>
+    <div class="servicio-item">
+      <span class="servicio-icono">🛻</span>
+      <div class="servicio-nombre">Rescate fuera de ruta</div>
+      <div class="servicio-desc">Recuperación de vehículos volcados, encajados o fuera de la calzada. Operativos de rescate en caminos rurales y zonas de difícil acceso.</div>
+      <div class="servicio-tags"><span class="stag">Volcados</span><span class="stag">Rural</span><span class="stag">Difícil acceso</span></div>
+    </div>
+    <div class="servicio-item">
+      <span class="servicio-icono">🚜</span>
+      <div class="servicio-nombre">Maquinaria agrícola</div>
+      <div class="servicio-desc">Traslado y auxilio de maquinaria agrícola: tractores, cosechadoras, sembradoras y equipos de campo en toda la zona chaqueña.</div>
+      <div class="servicio-tags"><span class="stag">Tractores</span><span class="stag">Cosechadoras</span><span class="stag">Campo</span></div>
+    </div>
+    <div class="servicio-item">
+      <span class="servicio-icono">🚛</span>
+      <div class="servicio-nombre">Camiones y transporte</div>
+      <div class="servicio-desc">Asistencia a camiones de carga, acoplados y vehículos de transporte pesado varados en ruta nacional o provincial.</div>
+      <div class="servicio-tags"><span class="stag">Pesados</span><span class="stag">Carga</span><span class="stag">Ruta nacional</span></div>
+    </div>
+    <div class="servicio-item">
+      <span class="servicio-icono">🌙</span>
+      <div class="servicio-nombre">Urgencias nocturnas</div>
+      <div class="servicio-desc">Servicio disponible las 24 horas, los 365 días del año. Noche, madrugada, feriados y fines de semana. Siempre con respuesta.</div>
+      <div class="servicio-tags"><span class="stag">24hs</span><span class="stag">Feriados</span><span class="stag">Fines de semana</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIAJES REALIZADOS -->
+<section class="seccion fondo2" id="viajes">
+  <div class="sec-header">
+    <div>
+      <div class="sec-eyebrow">Historial</div>
+      <h2 class="sec-titulo">Servicios realizados</h2>
+    </div>
+    <a href="https://wa.me/5493482257895" class="sec-link">Pedir auxilio</a>
+  </div>
+  <div class="viajes-grid">
+    <div class="viaje-card">
+      <div class="viaje-imagen"><span>🛻</span></div>
+      <div class="viaje-body">
+        <span class="viaje-tipo tipo-remolque">Remolque</span>
+        <div class="viaje-titulo">Auto particular — Ruta 16 hacia Charata</div>
+        <div class="viaje-detalle">📍 Km 43, Ruta 16 · Marzo 2026</div>
+      </div>
+    </div>
+    <div class="viaje-card">
+      <div class="viaje-imagen"><span>🚜</span></div>
+      <div class="viaje-body">
+        <span class="viaje-tipo tipo-rescate">Rescate</span>
+        <div class="viaje-titulo">Tractor encajado — Camino rural a campo</div>
+        <div class="viaje-detalle">📍 Zona rural Las Breñas · Marzo 2026</div>
+      </div>
+    </div>
+    <div class="viaje-card">
+      <div class="viaje-imagen"><span>🚛</span></div>
+      <div class="viaje-body">
+        <span class="viaje-tipo tipo-auxilio">Auxilio</span>
+        <div class="viaje-titulo">Camión de carga — falla en ruta 89</div>
+        <div class="viaje-detalle">📍 Ruta 89, Chaco · Febrero 2026</div>
+      </div>
+    </div>
+    <div class="viaje-card">
+      <div class="viaje-imagen"><span>🚙</span></div>
+      <div class="viaje-body">
+        <span class="viaje-tipo tipo-remolque">Remolque</span>
+        <div class="viaje-titulo">Camioneta — traslado hasta Resistencia</div>
+        <div class="viaje-detalle">📍 Las Breñas → Resistencia · Febrero 2026</div>
+      </div>
+    </div>
+    <div class="viaje-card">
+      <div class="viaje-imagen"><span>🛻</span></div>
+      <div class="viaje-body">
+        <span class="viaje-tipo tipo-auxilio">Auxilio</span>
+        <div class="viaje-titulo">Batería descargada — acceso a Gancedo</div>
+        <div class="viaje-detalle">📍 Acceso Gancedo · Enero 2026</div>
+      </div>
+    </div>
+    <div class="viaje-card">
+      <div class="viaje-imagen"><span>🚜</span></div>
+      <div class="viaje-body">
+        <span class="viaje-tipo tipo-remolque">Remolque</span>
+        <div class="viaje-titulo">Cosechadora — traslado entre campos</div>
+        <div class="viaje-detalle">📍 Zona rural Chaco · Enero 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZONA -->
+<section class="seccion fondo" id="zona">
+  <div class="sec-eyebrow">Cobertura</div>
+  <h2 class="sec-titulo">Zona de servicio</h2>
+  <p class="sec-desc">Con base en Las Breñas cubrimos toda la zona centro-oeste del Chaco. Para destinos más alejados consultá — coordinamos según el servicio.</p>
+  <div class="zona-layout">
+    <div class="zona-lista">
+      <div class="zona-item principal">
+        <div class="zona-nombre">📍 Las Breñas <span style="font-size:10px;background:rgba(251,191,0,0.2);color:var(--amarillo);padding:2px 8px;border-radius:2px;font-family:var(--display);font-weight:700;letter-spacing:1px">BASE</span></div>
+        <div class="zona-dist">Sede</div>
+      </div>
+      <div class="zona-item"><div class="zona-nombre">📍 Charata</div><div class="zona-dist">~40 km</div></div>
+      <div class="zona-item"><div class="zona-nombre">📍 Gancedo</div><div class="zona-dist">~55 km</div></div>
+      <div class="zona-item"><div class="zona-nombre">📍 Corzuela</div><div class="zona-dist">~65 km</div></div>
+      <div class="zona-item"><div class="zona-nombre">📍 Villa Ángela</div><div class="zona-dist">~80 km</div></div>
+      <div class="zona-item"><div class="zona-nombre">📍 Ruta 16 completa</div><div class="zona-dist">Toda la ruta</div></div>
+      <div class="zona-item"><div class="zona-nombre">📍 Zona rural — consultá</div><div class="zona-dist">A coordinar</div></div>
+    </div>
+    <div class="zona-cards">
+      <div class="zona-info-card">
+        <div class="zi-icono">🛣️</div>
+        <div>
+          <div class="zi-titulo">Rutas nacionales y provinciales</div>
+          <div class="zi-txt">Cobertura en Ruta Nacional 16, Ruta 89 y principales rutas provinciales del centro-oeste chaqueño.</div>
+        </div>
+      </div>
+      <div class="zona-info-card">
+        <div class="zi-icono">🌾</div>
+        <div>
+          <div class="zi-titulo">Caminos rurales</div>
+          <div class="zi-txt">Asistencia en caminos de campo, accesos rurales y zonas de difícil acceso. Experiencia en rescate de maquinaria agrícola.</div>
+        </div>
+      </div>
+      <div class="zona-info-card">
+        <div class="zi-icono">🚨</div>
+        <div>
+          <div class="zi-titulo">Zonas alejadas</div>
+          <div class="zi-txt">Para servicios más allá de la zona habitual consultá directamente. Evaluamos cada caso para darte una respuesta concreta y rápida.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="seccion fondo2" id="contacto">
+  <div class="sec-eyebrow">Emergencia</div>
+  <h2 class="sec-titulo">Contacto</h2>
+  <p class="sec-desc">Si estás en ruta y necesitás ayuda, la forma más rápida es WhatsApp o llamada directa. Respondemos de inmediato.</p>
+  <div class="contacto-layout">
+    <div class="contacto-lado">
+      <a href="https://wa.me/5493482257895?text=🚨%20AUXILIO%20URGENTE%20—%20Necesito%20ayuda%20en%20ruta." class="btn-llamar-grande">
+        <span class="btn-llamar-icono">🚨</span>
+        <div>
+          <div class="btn-llamar-titulo">Pedir auxilio ahora</div>
+          <div class="btn-llamar-sub">Respuesta inmediata · 24 horas</div>
+        </div>
+      </a>
+      <a href="https://wa.me/5493482257895" class="btn-wsp-grande">
+        <span class="btn-wsp-grande-icono">💬</span>
+        <div>
+          <div class="btn-wsp-grande-titulo">WhatsApp — Livio Rodriguez</div>
+          <div class="btn-wsp-grande-sub">+54 9 3482 257895</div>
+        </div>
+      </a>
+      <div class="contacto-card">
+        <div class="c-icono">📍</div>
+        <div>
+          <div class="c-label">Base de operaciones</div>
+          <div class="c-valor">Las Breñas, Chaco</div>
+          <div class="c-sub">Cobertura en toda la zona centro-oeste del Chaco</div>
+        </div>
+      </div>
+      <div class="contacto-card">
+        <div class="c-icono">🕐</div>
+        <div>
+          <div class="c-label">Disponibilidad</div>
+          <div class="c-valor">Las 24 horas, los 365 días</div>
+          <div class="c-sub">Noche, madrugada, feriados y fines de semana</div>
+        </div>
+      </div>
+    </div>
+    <div class="contacto-lado">
+      <div class="operador-card">
+        <div class="op-avatar">LR</div>
+        <div>
+          <div class="op-nombre">Livio Rodriguez</div>
+          <div class="op-rol">Auxiliador en ruta — Camioneta con trailer</div>
+          <div class="op-base">📍 Base: Las Breñas, Chaco</div>
+        </div>
+      </div>
+      <div class="contacto-card">
+        <div class="c-icono">🚚</div>
+        <div>
+          <div class="c-label">Equipo de trabajo</div>
+          <div class="c-valor">Camioneta con trailer</div>
+          <div class="c-sub">Capacidad para todo tipo de vehículos y maquinaria</div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq-lista">
+        <div class="faq-item">
+          <div class="faq-pregunta" onclick="toggleFaq(this)">
+            ¿Cuánto tiempo tarda en llegar? <span class="faq-flecha">+</span>
+          </div>
+          <div class="faq-respuesta">Depende de la ubicación y la distancia desde Las Breñas. Generalmente entre 20 y 60 minutos dentro de la zona de cobertura habitual. Al contactarnos te damos un tiempo estimado real.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-pregunta" onclick="toggleFaq(this)">
+            ¿Qué vehículos pueden auxiliar? <span class="faq-flecha">+</span>
+          </div>
+          <div class="faq-respuesta">Todo tipo: autos, camionetas, camiones, maquinaria agrícola (tractores, cosechadoras) y vehículos especiales. El trailer está preparado para distintos tamaños y pesos.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-pregunta" onclick="toggleFaq(this)">
+            ¿Trabajan de noche y feriados? <span class="faq-flecha">+</span>
+          </div>
+          <div class="faq-respuesta">Sí, el servicio es 24 horas los 365 días del año. Noche, madrugada, fines de semana y feriados. Un auto varado en ruta no espera horario comercial.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-pregunta" onclick="toggleFaq(this)">
+            ¿Cómo pido el servicio? <span class="faq-flecha">+</span>
+          </div>
+          <div class="faq-respuesta">La forma más rápida es por WhatsApp al número de Livio Rodriguez. Indicá tu ubicación exacta, el tipo de vehículo y el problema. Te respondemos de inmediato con tiempo estimado y precio.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo-txt">Auxilio <span>Benicio</span></div>
+    <div class="footer-logo-sub">Las Breñas · Chaco · 24hs</div>
+    <p class="footer-desc">Servicio de auxilio en ruta y remolque con trailer. Todo tipo de vehículos. Las Breñas y zona del Chaco. Disponible las 24 horas.</p>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Servicios</div>
+    <ul>
+      <li><a href="#">Remolque con trailer</a></li>
+      <li><a href="#">Auxilio mecánico</a></li>
+      <li><a href="#">Rescate fuera de ruta</a></li>
+      <li><a href="#">Maquinaria agrícola</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Contacto</div>
+    <ul>
+      <li><a href="#">WhatsApp urgente</a></li>
+      <li><a href="#">Zona de cobertura</a></li>
+      <li><a href="#">Servicios realizados</a></li>
+      <li><a href="#">Las Breñas, Chaco</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Auxilio Benicio — Las Breñas, Chaco · Todos los derechos reservados</span>
+    <span class="footer-credit">// diseño web · tu nombre acá</span>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.querySelector('.hamburger');
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    const abierto = item.classList.contains('abierto');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('abierto'));
+    if (!abierto) item.classList.add('abierto');
+  }
+</script>
+</body>
+</html>

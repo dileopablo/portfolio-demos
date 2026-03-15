@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO BÁSICO -->
+<title>Instituto Superior de Formación Docente Reconquista | Profesorados en Santa Fe</title>
+<meta name="description" content="Instituto de formación docente en Reconquista, Santa Fe. Profesorados en Educación Primaria, Inicial, Matemática e Inglés. Inscripciones abiertas.">
+<meta name="keywords" content="profesorado Reconquista, formación docente Santa Fe, instituto terciario Reconquista, maestro primaria Santa Fe norte">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.isfd-reconquista.edu.ar/">
+
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="ISFD Reconquista | Formación Docente de Calidad">
+<meta property="og:description" content="Profesorados en Educación Primaria, Inicial, Matemática e Inglés en Reconquista, Santa Fe.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.isfd-reconquista.edu.ar/">
+<meta property="og:locale" content="es_AR">
+
+<!-- SCHEMA.ORG -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Instituto Superior de Formación Docente Reconquista",
+  "description": "Instituto terciario de formación docente en Reconquista, Santa Fe.",
+  "url": "https://www.isfd-reconquista.edu.ar",
+  "telephone": "+54-3482-43XXXX",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sarmiento 780",
+    "addressLocality": "Reconquista",
+    "addressRegion": "Santa Fe",
+    "postalCode": "3560",
+    "addressCountry": "AR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:00",
+      "closes": "22:00"
+    }
+  ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --azul: #1a3a5c;
+  --azul-medio: #2a5298;
+  --azul-claro: #e8f0fb;
+  --acento: #f0a500;
+  --acento-claro: #fff8e8;
+  --blanco: #ffffff;
+  --fondo: #f7f8fc;
+  --texto: #1a1f2e;
+  --texto-suave: #5a6278;
+  --borde: #e2e6f0;
+  --display: 'Instrument Serif', serif;
+  --cuerpo: 'Plus Jakarta Sans', sans-serif;
+  --pad: clamp(20px, 5vw, 64px);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--blanco); color: var(--texto); font-family: var(--cuerpo); font-weight: 400; overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--borde);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--pad); height: 64px;
+}
+
+.nav-logo { display: flex; flex-direction: column; text-decoration: none; }
+.nav-logo-sigla { font-family: var(--display); font-size: 22px; color: var(--azul); line-height: 1; letter-spacing: 1px; }
+.nav-logo-sub { font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--acento); margin-top: 1px; }
+
+.nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+.nav-links a { color: var(--texto-suave); text-decoration: none; font-size: 13px; font-weight: 500; transition: color .2s; }
+.nav-links a:hover { color: var(--azul); }
+.nav-cta { background: var(--azul) !important; color: var(--blanco) !important; padding: 9px 22px; border-radius: 6px; font-weight: 600 !important; font-size: 13px !important; transition: background .2s !important; }
+.nav-cta:hover { background: var(--azul-medio) !important; }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--texto); border-radius: 2px; transition: all .3s; }
+
+.mobile-menu {
+  display: none; position: fixed; top: 64px; left: 0; right: 0; z-index: 199;
+  background: var(--blanco); border-bottom: 1px solid var(--borde);
+  padding: 20px var(--pad) 28px; flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { color: var(--texto-suave); text-decoration: none; font-size: 14px; font-weight: 500; padding: 13px 0; border-bottom: 1px solid var(--borde); transition: color .2s; }
+.mobile-menu a:last-child { border-bottom: none; color: var(--azul); font-weight: 600; margin-top: 6px; }
+.mobile-menu a:hover { color: var(--azul); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100svh; padding-top: 64px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  background: var(--fondo);
+  position: relative; overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 55%; height: 100%;
+  background: var(--azul);
+  z-index: 0;
+}
+
+.hero-left {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 60px var(--pad) 60px clamp(20px, 5vw, 64px);
+}
+
+.hero-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--acento-claro); border: 1px solid #f0c060;
+  color: #9a6800; padding: 6px 14px; border-radius: 100px;
+  font-size: 11px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; margin-bottom: 28px; width: fit-content;
+}
+
+.hero-chip::before { content: '●'; font-size: 8px; color: var(--acento); }
+
+.hero-titulo {
+  font-family: var(--display); font-size: clamp(42px, 5.5vw, 72px);
+  line-height: 1.05; color: var(--azul); margin-bottom: 20px;
+}
+
+.hero-titulo em { font-style: italic; color: var(--azul-medio); }
+
+.hero-desc {
+  font-size: 15px; line-height: 1.7; color: var(--texto-suave);
+  max-width: 400px; margin-bottom: 40px;
+}
+
+.hero-btns { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+
+.btn-primary {
+  background: var(--azul); color: var(--blanco);
+  padding: 13px 28px; border-radius: 6px; font-family: var(--cuerpo);
+  font-size: 13px; font-weight: 600; text-decoration: none;
+  transition: background .2s, transform .15s; display: inline-block;
+  border: none; cursor: pointer;
+}
+.btn-primary:hover { background: var(--azul-medio); transform: translateY(-1px); }
+
+.btn-secondary {
+  background: transparent; color: var(--azul);
+  padding: 13px 28px; border-radius: 6px; font-family: var(--cuerpo);
+  font-size: 13px; font-weight: 600; text-decoration: none;
+  border: 2px solid var(--borde); transition: all .2s; display: inline-block;
+}
+.btn-secondary:hover { border-color: var(--azul); background: var(--azul-claro); }
+
+.hero-right {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; justify-content: center;
+  padding: 60px 40px;
+}
+
+.hero-card {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px; padding: 32px; width: 100%; max-width: 340px;
+  backdrop-filter: blur(8px);
+}
+
+.hero-card-titulo {
+  font-family: var(--display); font-size: 22px; color: var(--blanco);
+  margin-bottom: 20px; line-height: 1.2;
+}
+
+.carrera-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.carrera-item:last-child { border-bottom: none; }
+
+.carrera-icono {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: rgba(255,255,255,0.1); display: flex; align-items: center;
+  justify-content: center; font-size: 16px; flex-shrink: 0;
+}
+
+.carrera-nombre { font-size: 13px; font-weight: 500; color: var(--blanco); line-height: 1.3; }
+.carrera-duracion { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+.hero-badge-inscripcion {
+  margin-top: 20px; background: var(--acento);
+  border-radius: 8px; padding: 12px 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.badge-texto { font-size: 12px; font-weight: 600; color: var(--azul); line-height: 1.3; }
+.badge-icono { font-size: 20px; }
+
+/* ── STATS ── */
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  background: var(--azul);
+}
+.stat-item {
+  padding: 32px var(--pad); border-right: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: var(--display); font-size: clamp(32px, 4vw, 48px); color: var(--acento); line-height: 1; margin-bottom: 6px; }
+.stat-label { font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 1px; text-transform: uppercase; }
+
+/* ── SECCIONES ── */
+.seccion { padding: 90px var(--pad); }
+.seccion.fondo { background: var(--fondo); }
+
+.seccion-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--azul-medio); font-size: 11px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px;
+}
+.seccion-chip::before { content: ''; width: 20px; height: 2px; background: var(--acento); }
+
+.seccion-titulo {
+  font-family: var(--display); font-size: clamp(32px, 4vw, 52px);
+  color: var(--azul); line-height: 1.1; margin-bottom: 16px;
+}
+
+.seccion-desc { font-size: 15px; color: var(--texto-suave); line-height: 1.7; max-width: 540px; margin-bottom: 48px; }
+
+/* ── CARRERAS ── */
+.carreras-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+.carrera-card {
+  background: var(--blanco); border: 1px solid var(--borde);
+  border-radius: 12px; padding: 28px; transition: all .2s; cursor: pointer;
+  border-top: 3px solid transparent;
+}
+.carrera-card:hover { border-top-color: var(--azul); box-shadow: 0 8px 24px rgba(26,58,92,0.1); transform: translateY(-2px); }
+
+.carrera-card-icono { font-size: 32px; margin-bottom: 14px; }
+.carrera-card-nombre { font-family: var(--display); font-size: 22px; color: var(--azul); margin-bottom: 8px; }
+.carrera-card-desc { font-size: 13px; color: var(--texto-suave); line-height: 1.6; margin-bottom: 16px; }
+
+.carrera-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.tag { background: var(--azul-claro); color: var(--azul-medio); font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 100px; }
+.tag.acento { background: var(--acento-claro); color: #9a6800; }
+
+.carrera-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid var(--borde); }
+.carrera-duracion-txt { font-size: 12px; color: var(--texto-suave); font-weight: 500; }
+.carrera-link { font-size: 12px; color: var(--azul-medio); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 4px; }
+.carrera-link:hover { gap: 8px; }
+.carrera-link::after { content: '→'; }
+
+/* ── NOTICIAS ── */
+.noticias-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+
+.noticia-card {
+  background: var(--blanco); border: 1px solid var(--borde);
+  border-radius: 12px; overflow: hidden; transition: all .2s; cursor: pointer;
+}
+.noticia-card:hover { box-shadow: 0 8px 24px rgba(26,58,92,0.1); transform: translateY(-2px); }
+
+.noticia-imagen {
+  height: 160px; background: var(--azul-claro);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px; position: relative; overflow: hidden;
+}
+
+.noticia-imagen::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--azul-claro) 0%, #d0e4f8 100%);
+  opacity: .5;
+}
+
+.noticia-imagen span { position: relative; z-index: 1; }
+
+.noticia-body { padding: 20px; }
+.noticia-tag {
+  display: inline-block; background: var(--azul-claro); color: var(--azul-medio);
+  font-size: 10px; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; padding: 4px 10px; border-radius: 100px; margin-bottom: 10px;
+}
+.noticia-titulo { font-family: var(--display); font-size: 18px; color: var(--azul); line-height: 1.2; margin-bottom: 8px; }
+.noticia-fecha { font-size: 11px; color: var(--texto-suave); }
+
+/* ── INSCRIPCION ── */
+.inscripcion { display: grid; grid-template-columns: 1fr 1fr; background: var(--azul); }
+
+.inscripcion-info {
+  padding: 90px var(--pad); display: flex;
+  flex-direction: column; justify-content: center;
+}
+
+.inscripcion-info .seccion-titulo { color: var(--blanco); }
+.inscripcion-info .seccion-chip { color: var(--acento); }
+.inscripcion-info .seccion-chip::before { background: var(--acento); }
+.inscripcion-desc { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.65); margin: 16px 0 32px; max-width: 400px; }
+
+.info-lista { display: flex; flex-direction: column; gap: 12px; }
+.info-lista-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.8); }
+.info-lista-item::before { content: '✓'; color: var(--acento); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+.inscripcion-form {
+  padding: 90px var(--pad); background: var(--blanco);
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.form-titulo { font-family: var(--display); font-size: 30px; color: var(--azul); margin-bottom: 28px; line-height: 1.2; }
+
+.form-grupo { margin-bottom: 16px; }
+.form-grupo label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--texto-suave); margin-bottom: 7px; }
+.form-grupo input, .form-grupo select, .form-grupo textarea {
+  width: 100%; background: var(--fondo); border: 1.5px solid var(--borde);
+  border-radius: 8px; padding: 11px 14px; color: var(--texto);
+  font-family: var(--cuerpo); font-size: 14px; outline: none;
+  transition: border-color .2s; -webkit-appearance: none;
+}
+.form-grupo input:focus, .form-grupo select:focus, .form-grupo textarea:focus { border-color: var(--azul); background: var(--blanco); }
+.form-grupo textarea { resize: vertical; min-height: 80px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.btn-form {
+  width: 100%; background: var(--azul); color: var(--blanco);
+  border: none; padding: 14px; border-radius: 8px; font-family: var(--cuerpo);
+  font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 6px;
+  transition: background .2s; letter-spacing: .5px;
+}
+.btn-form:hover { background: var(--azul-medio); }
+
+/* ── CONTACTO ── */
+.contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+
+.contacto-datos { display: flex; flex-direction: column; gap: 16px; }
+.contacto-item {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--fondo); border: 1px solid var(--borde);
+  border-radius: 10px; padding: 16px;
+}
+.contacto-icono { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+.contacto-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--texto-suave); margin-bottom: 4px; }
+.contacto-valor { font-size: 14px; color: var(--texto); font-weight: 500; }
+
+.mapa-placeholder {
+  background: var(--azul-claro); border: 1px solid var(--borde);
+  border-radius: 12px; height: 280px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 10px;
+  font-size: 48px; color: var(--azul-medio); cursor: pointer;
+  transition: all .2s;
+}
+.mapa-placeholder:hover { background: #d8eaf8; }
+.mapa-texto { font-size: 13px; color: var(--texto-suave); font-weight: 500; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--azul); color: rgba(255,255,255,0.7);
+  padding: 56px var(--pad) 28px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+}
+.footer-logo-txt { font-family: var(--display); font-size: 22px; color: var(--blanco); margin-bottom: 4px; }
+.footer-logo-sub { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--acento); margin-bottom: 14px; }
+.footer-desc { font-size: 13px; line-height: 1.6; max-width: 240px; }
+.footer-col-titulo { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 9px; }
+.footer-col ul li a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color .2s; }
+.footer-col ul li a:hover { color: var(--blanco); }
+.footer-bottom { grid-column: 1/-1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.35); }
+.footer-credit { font-size: 11px; color: var(--acento); opacity: .6; }
+
+/* ── ANIMACIONES ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.hero-left { animation: fadeUp .7s ease both; }
+.hero-right { animation: fadeUp .7s ease .2s both; }
+
+/* ══════════════════
+   RESPONSIVE
+══════════════════ */
+@media (max-width: 960px) {
+  .stats { grid-template-columns: repeat(2,1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.1); }
+  .stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.1); border-right: none; }
+
+  .noticias-grid { grid-template-columns: 1fr 1fr; }
+  .carreras-grid { grid-template-columns: 1fr; }
+
+  footer { grid-template-columns: 1fr 1fr; }
+  footer > div:first-child { grid-column: span 2; }
+  .footer-bottom { grid-column: span 2; }
+}
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  .hero { grid-template-columns: 1fr; }
+  .hero::before { display: none; }
+  .hero-left { background: var(--fondo); padding: 48px var(--pad) 40px; }
+  .hero-right { background: var(--azul); padding: 40px var(--pad); justify-content: flex-start; }
+  .hero-card { max-width: 100%; }
+
+  .inscripcion { grid-template-columns: 1fr; }
+  .contacto-grid { grid-template-columns: 1fr; }
+
+  .noticias-grid { grid-template-columns: 1fr; }
+
+  footer { grid-template-columns: 1fr; }
+  footer > div:first-child { grid-column: span 1; }
+  .footer-bottom { grid-column: span 1; flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .hero-titulo { font-size: 40px; }
+  .hero-btns { flex-direction: column; align-items: stretch; }
+  .btn-primary, .btn-secondary { text-align: center; }
+  .form-row { grid-template-columns: 1fr; }
+  .seccion { padding: 60px var(--pad); }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-sigla">ISFD</span>
+    <span class="nav-logo-sub">Reconquista</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#carreras">Carreras</a></li>
+    <li><a href="#noticias">Novedades</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#inscripcion" class="nav-cta">Inscribirse</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#carreras" onclick="closeMenu()">Carreras</a>
+  <a href="#noticias" onclick="closeMenu()">Novedades</a>
+  <a href="#contacto" onclick="closeMenu()">Contacto</a>
+  <a href="#inscripcion" onclick="closeMenu()">Inscribirse →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-chip">Inscripciones 2026 abiertas</span>
+    <h1 class="hero-titulo">Formá el<br>docente que<br><em>el mundo necesita</em></h1>
+    <p class="hero-desc">Instituto Superior de Formación Docente en Reconquista, Santa Fe. Profesorados reconocidos por el Ministerio de Educación de la Nación.</p>
+    <div class="hero-btns">
+      <a href="#inscripcion" class="btn-primary">Quiero inscribirme</a>
+      <a href="#carreras" class="btn-secondary">Ver carreras</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-card">
+      <div class="hero-card-titulo">Nuestros profesorados</div>
+      <div class="carrera-item">
+        <div class="carrera-icono">📚</div>
+        <div>
+          <div class="carrera-nombre">Educación Primaria</div>
+          <div class="carrera-duracion">4 años · Título nacional</div>
+        </div>
+      </div>
+      <div class="carrera-item">
+        <div class="carrera-icono">🧒</div>
+        <div>
+          <div class="carrera-nombre">Educación Inicial</div>
+          <div class="carrera-duracion">4 años · Título nacional</div>
+        </div>
+      </div>
+      <div class="carrera-item">
+        <div class="carrera-icono">📐</div>
+        <div>
+          <div class="carrera-nombre">Matemática</div>
+          <div class="carrera-duracion">4 años · Título nacional</div>
+        </div>
+      </div>
+      <div class="carrera-item">
+        <div class="carrera-icono">🌐</div>
+        <div>
+          <div class="carrera-nombre">Inglés</div>
+          <div class="carrera-duracion">4 años · Título nacional</div>
+        </div>
+      </div>
+      <div class="hero-badge-inscripcion">
+        <div class="badge-icono">📅</div>
+        <div class="badge-texto">Inscripciones abiertas<br>hasta el 31 de marzo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-num">+800</div>
+    <div class="stat-label">Estudiantes activos</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">4</div>
+    <div class="stat-label">Profesorados</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">35</div>
+    <div class="stat-label">Años de trayectoria</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">+1.200</div>
+    <div class="stat-label">Docentes graduados</div>
+  </div>
+</div>
+
+<!-- CARRERAS -->
+<section class="seccion fondo" id="carreras">
+  <div class="seccion-chip">Formación</div>
+  <h2 class="seccion-titulo">Nuestras carreras</h2>
+  <p class="seccion-desc">Todos nuestros profesorados tienen título oficial reconocido por el Ministerio de Educación y habilitación para ejercer en todo el país.</p>
+  <div class="carreras-grid">
+    <div class="carrera-card">
+      <div class="carrera-card-icono">📚</div>
+      <h3 class="carrera-card-nombre">Profesorado de Educación Primaria</h3>
+      <p class="carrera-card-desc">Formación integral para enseñar en el nivel primario. Incluye prácticas docentes desde el primer año en escuelas de la región.</p>
+      <div class="carrera-tags">
+        <span class="tag">Presencial</span>
+        <span class="tag">4 años</span>
+        <span class="tag acento">Título nacional</span>
+      </div>
+      <div class="carrera-footer">
+        <span class="carrera-duracion-txt">🕐 Turno mañana y tarde</span>
+        <a href="#inscripcion" class="carrera-link">Ver detalle</a>
+      </div>
+    </div>
+    <div class="carrera-card">
+      <div class="carrera-card-icono">🧒</div>
+      <h3 class="carrera-card-nombre">Profesorado de Educación Inicial</h3>
+      <p class="carrera-card-desc">Preparación para trabajar con la primera infancia. Énfasis en el desarrollo evolutivo, el juego y la estimulación temprana.</p>
+      <div class="carrera-tags">
+        <span class="tag">Presencial</span>
+        <span class="tag">4 años</span>
+        <span class="tag acento">Título nacional</span>
+      </div>
+      <div class="carrera-footer">
+        <span class="carrera-duracion-txt">🕐 Turno mañana y tarde</span>
+        <a href="#inscripcion" class="carrera-link">Ver detalle</a>
+      </div>
+    </div>
+    <div class="carrera-card">
+      <div class="carrera-card-icono">📐</div>
+      <h3 class="carrera-card-nombre">Profesorado de Matemática</h3>
+      <p class="carrera-card-desc">Formación para la enseñanza de matemática en el nivel secundario. Sólida base disciplinar con didáctica aplicada.</p>
+      <div class="carrera-tags">
+        <span class="tag">Presencial</span>
+        <span class="tag">4 años</span>
+        <span class="tag acento">Título nacional</span>
+      </div>
+      <div class="carrera-footer">
+        <span class="carrera-duracion-txt">🕐 Turno tarde y noche</span>
+        <a href="#inscripcion" class="carrera-link">Ver detalle</a>
+      </div>
+    </div>
+    <div class="carrera-card">
+      <div class="carrera-card-icono">🌐</div>
+      <h3 class="carrera-card-nombre">Profesorado de Inglés</h3>
+      <p class="carrera-card-desc">Carrera orientada a la enseñanza del idioma inglés en niveles primario y secundario. Alta demanda laboral en toda la región.</p>
+      <div class="carrera-tags">
+        <span class="tag">Presencial</span>
+        <span class="tag">4 años</span>
+        <span class="tag acento">Título nacional</span>
+      </div>
+      <div class="carrera-footer">
+        <span class="carrera-duracion-txt">🕐 Turno tarde y noche</span>
+        <a href="#inscripcion" class="carrera-link">Ver detalle</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICIAS -->
+<section class="seccion" id="noticias">
+  <div class="seccion-chip">Novedades</div>
+  <h2 class="seccion-titulo">Últimas noticias</h2>
+  <p class="seccion-desc">Enterate de todo lo que pasa en el instituto: eventos, fechas importantes y actividades académicas.</p>
+  <div class="noticias-grid">
+    <div class="noticia-card">
+      <div class="noticia-imagen"><span>📋</span></div>
+      <div class="noticia-body">
+        <span class="noticia-tag">Institucional</span>
+        <h3 class="noticia-titulo">Inscripciones 2026 abiertas hasta el 31 de marzo</h3>
+        <span class="noticia-fecha">10 de marzo, 2026</span>
+      </div>
+    </div>
+    <div class="noticia-card">
+      <div class="noticia-imagen"><span>🎓</span></div>
+      <div class="noticia-body">
+        <span class="noticia-tag">Graduados</span>
+        <h3 class="noticia-titulo">Colación de grados 2025 — más de 60 nuevos docentes</h3>
+        <span class="noticia-fecha">28 de febrero, 2026</span>
+      </div>
+    </div>
+    <div class="noticia-card">
+      <div class="noticia-imagen"><span>📅</span></div>
+      <div class="noticia-body">
+        <span class="noticia-tag">Académico</span>
+        <h3 class="noticia-titulo">Calendario académico 2026 — fechas de exámenes y receso</h3>
+        <span class="noticia-fecha">20 de febrero, 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSCRIPCION -->
+<section class="inscripcion" id="inscripcion">
+  <div class="inscripcion-info">
+    <div class="seccion-chip">Sumate</div>
+    <h2 class="seccion-titulo">Inscribite al profesorado</h2>
+    <p class="inscripcion-desc">Completá el formulario y nos ponemos en contacto para guiarte en el proceso de admisión, documentación requerida y aranceles.</p>
+    <div class="info-lista">
+      <div class="info-lista-item">Inscripciones abiertas hasta el 31 de marzo</div>
+      <div class="info-lista-item">Sin examen de ingreso — solo entrevista orientadora</div>
+      <div class="info-lista-item">Cuotas accesibles con becas disponibles</div>
+      <div class="info-lista-item">Posibilidad de cursar en turno tarde o noche</div>
+    </div>
+  </div>
+  <div class="inscripcion-form">
+    <div class="form-titulo">Solicitar información</div>
+    <div class="form-row">
+      <div class="form-grupo">
+        <label>Nombre</label>
+        <input type="text" placeholder="María">
+      </div>
+      <div class="form-grupo">
+        <label>Apellido</label>
+        <input type="text" placeholder="González">
+      </div>
+    </div>
+    <div class="form-grupo">
+      <label>Teléfono / WhatsApp</label>
+      <input type="tel" placeholder="+54 9 3482 XXXXXX">
+    </div>
+    <div class="form-grupo">
+      <label>Carrera de interés</label>
+      <select>
+        <option value="">Seleccioná una carrera</option>
+        <option>Profesorado de Educación Primaria</option>
+        <option>Profesorado de Educación Inicial</option>
+        <option>Profesorado de Matemática</option>
+        <option>Profesorado de Inglés</option>
+        <option>Quiero conocer todas las opciones</option>
+      </select>
+    </div>
+    <div class="form-grupo">
+      <label>¿Terminaste el secundario?</label>
+      <select>
+        <option value="">Seleccioná una opción</option>
+        <option>Sí, ya tengo el título</option>
+        <option>Estoy cursando el último año</option>
+        <option>Todavía no</option>
+      </select>
+    </div>
+    <div class="form-grupo">
+      <label>Mensaje (opcional)</label>
+      <textarea placeholder="Contanos tu situación o cualquier consulta que tengas..."></textarea>
+    </div>
+    <button class="btn-form">Enviar consulta</button>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="seccion fondo" id="contacto">
+  <div class="seccion-chip">Encontranos</div>
+  <h2 class="seccion-titulo">Contacto y ubicación</h2>
+  <p class="seccion-desc">Estamos en el centro de Reconquista. Podés visitarnos en horario de atención o contactarnos por cualquiera de estos medios.</p>
+  <div class="contacto-grid">
+    <div class="contacto-datos">
+      <div class="contacto-item">
+        <div class="contacto-icono">📍</div>
+        <div>
+          <div class="contacto-label">Dirección</div>
+          <div class="contacto-valor">Sarmiento 780, Reconquista, Santa Fe</div>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <div class="contacto-icono">📞</div>
+        <div>
+          <div class="contacto-label">Teléfono</div>
+          <div class="contacto-valor">(03482) 43-XXXX</div>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <div class="contacto-icono">✉️</div>
+        <div>
+          <div class="contacto-label">Email</div>
+          <div class="contacto-valor">info@isfd-reconquista.edu.ar</div>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <div class="contacto-icono">🕐</div>
+        <div>
+          <div class="contacto-label">Horario de atención</div>
+          <div class="contacto-valor">Lunes a viernes de 7:00 a 22:00 hs</div>
+        </div>
+      </div>
+    </div>
+    <div class="mapa-placeholder" onclick="this.innerHTML='<div style=\'text-align:center\'><div style=\'font-size:48px\'>📍</div><div style=\'font-size:13px;color:#2a5298;font-weight:600;margin-top:8px\'>Sarmiento 780, Reconquista</div><div style=\'font-size:12px;color:#5a6278;margin-top:4px\'>Clic para abrir en Google Maps</div></div>'">
+      <span>🗺️</span>
+      <span class="mapa-texto">Ver en Google Maps</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo-txt">ISFD Reconquista</div>
+    <div class="footer-logo-sub">Formación Docente</div>
+    <p class="footer-desc">Instituto Superior de Formación Docente. Formando educadores para el norte de Santa Fe desde 1991.</p>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Institución</div>
+    <ul>
+      <li><a href="#">Historia</a></li>
+      <li><a href="#">Autoridades</a></li>
+      <li><a href="#">Reglamento</a></li>
+      <li><a href="#">Transparencia</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Carreras</div>
+    <ul>
+      <li><a href="#">Ed. Primaria</a></li>
+      <li><a href="#">Ed. Inicial</a></li>
+      <li><a href="#">Matemática</a></li>
+      <li><a href="#">Inglés</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Estudiantes</div>
+    <ul>
+      <li><a href="#">Calendario</a></li>
+      <li><a href="#">Aula virtual</a></li>
+      <li><a href="#">Becas</a></li>
+      <li><a href="#">Biblioteca</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 ISFD Reconquista — Todos los derechos reservados</span>
+    <span class="footer-credit">Diseño web · Tu nombre acá</span>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.querySelector('.hamburger');
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>BarberCo Reconquista | Barbería Urbana en Santa Fe</title>
+<meta name="description" content="Barbería urbana en Reconquista, Santa Fe. Cortes, diseño de barba y tratamientos premium. Reservá tu turno online.">
+<meta name="keywords" content="barbería Reconquista, corte de pelo Reconquista, barba Santa Fe, barbero Reconquista">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.barberco-reconquista.com.ar/">
+<meta property="og:title" content="BarberCo Reconquista | Barbería Urbana">
+<meta property="og:description" content="Cortes, barba y tratamientos premium en el centro de Reconquista. Reservá online.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "BarberCo Reconquista",
+  "description": "Barbería urbana en Reconquista, Santa Fe.",
+  "url": "https://www.barberco-reconquista.com.ar",
+  "telephone": "+54-3482-45XXXX",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Córdoba 320",
+    "addressLocality": "Reconquista",
+    "addressRegion": "Santa Fe",
+    "postalCode": "3560",
+    "addressCountry": "AR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00", "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00", "closes": "17:00"
+    }
+  ],
+  "priceRange": "$$"
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --negro: #0d0d0d;
+  --negro2: #161616;
+  --negro3: #1e1e1e;
+  --blanco: #f2f0eb;
+  --acento: #e8c547;
+  --acento2: #d4b03a;
+  --gris: #888;
+  --borde: rgba(255,255,255,0.08);
+  --display: 'Syne', sans-serif;
+  --cuerpo: 'Inter', sans-serif;
+  --pad: clamp(20px, 5vw, 56px);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--negro); color: var(--blanco); font-family: var(--cuerpo); font-weight: 300; overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--pad); height: 60px;
+  background: rgba(13,13,13,0.92); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--borde);
+}
+
+.nav-logo {
+  font-family: var(--display); font-size: 18px; font-weight: 800;
+  color: var(--blanco); text-decoration: none; letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.nav-logo span { color: var(--acento); }
+
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { color: var(--gris); text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; transition: color .2s; }
+.nav-links a:hover { color: var(--blanco); }
+.nav-cta { background: var(--acento) !important; color: var(--negro) !important; padding: 8px 20px; border-radius: 4px; font-weight: 600 !important; }
+.nav-cta:hover { background: var(--acento2) !important; }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--blanco); transition: all .3s; }
+
+.mobile-menu {
+  display: none; position: fixed; top: 60px; left: 0; right: 0; z-index: 199;
+  background: rgba(13,13,13,0.98); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--borde);
+  padding: 20px var(--pad) 28px; flex-direction: column;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { color: var(--gris); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; padding: 13px 0; border-bottom: 1px solid var(--borde); transition: color .2s; }
+.mobile-menu a:last-child { border-bottom: none; color: var(--acento); margin-top: 6px; }
+.mobile-menu a:hover { color: var(--blanco); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100svh; padding-top: 60px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  position: relative; overflow: hidden;
+}
+
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 60px var(--pad); position: relative; z-index: 1;
+}
+
+.hero-linea {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 10px; font-weight: 600; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--acento); margin-bottom: 28px;
+}
+.hero-linea::after { content: ''; flex: 1; height: 1px; background: var(--acento); max-width: 48px; }
+
+.hero-titulo {
+  font-family: var(--display); font-size: clamp(48px, 6vw, 88px);
+  font-weight: 800; line-height: .95; text-transform: uppercase;
+  letter-spacing: -1px; margin-bottom: 24px;
+}
+
+.hero-titulo .linea2 { color: var(--acento); display: block; font-style: italic; font-weight: 600; }
+
+.hero-desc {
+  font-size: 14px; line-height: 1.7; color: var(--gris);
+  max-width: 360px; margin-bottom: 40px;
+}
+
+.hero-btns { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+
+.btn-primary {
+  background: var(--acento); color: var(--negro); padding: 13px 28px;
+  border-radius: 4px; font-family: var(--cuerpo); font-size: 12px;
+  font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  text-decoration: none; border: none; cursor: pointer;
+  transition: background .2s, transform .15s; display: inline-block;
+}
+.btn-primary:hover { background: var(--acento2); transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent; color: var(--blanco); padding: 13px 28px;
+  border-radius: 4px; font-family: var(--cuerpo); font-size: 12px;
+  font-weight: 500; letter-spacing: 1px; text-transform: uppercase;
+  text-decoration: none; border: 1px solid rgba(255,255,255,0.2);
+  transition: all .2s; display: inline-block;
+}
+.btn-outline:hover { border-color: var(--blanco); background: rgba(255,255,255,0.05); }
+
+.hero-right {
+  position: relative; overflow: hidden;
+  background: var(--negro2);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.hero-bg-txt {
+  position: absolute; font-family: var(--display); font-weight: 800;
+  font-size: clamp(100px, 14vw, 180px); text-transform: uppercase;
+  color: rgba(255,255,255,0.03); line-height: 1; user-select: none;
+  letter-spacing: -4px; text-align: center; pointer-events: none;
+}
+
+.hero-cards { display: flex; flex-direction: column; gap: 12px; padding: 40px; position: relative; z-index: 1; width: 100%; max-width: 320px; }
+
+.hero-card-stat {
+  background: var(--negro3); border: 1px solid var(--borde);
+  border-radius: 10px; padding: 18px 20px;
+  display: flex; align-items: center; gap: 14px;
+}
+.stat-icono { font-size: 24px; }
+.stat-info-num { font-family: var(--display); font-size: 26px; font-weight: 700; color: var(--acento); line-height: 1; }
+.stat-info-lbl { font-size: 11px; color: var(--gris); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+
+.hero-card-horario {
+  background: var(--acento); border-radius: 10px; padding: 18px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.horario-txt { font-size: 12px; font-weight: 700; color: var(--negro); letter-spacing: 1px; text-transform: uppercase; }
+.horario-val { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--negro); }
+.horario-dot { width: 10px; height: 10px; border-radius: 50%; background: #2ecc71; box-shadow: 0 0 8px #2ecc71; }
+
+/* ── SERVICIOS ── */
+.servicios { padding: 90px var(--pad); background: var(--negro2); }
+
+.sec-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
+
+.sec-chip { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--acento); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.sec-chip::before { content: ''; width: 16px; height: 2px; background: var(--acento); }
+
+.sec-titulo { font-family: var(--display); font-size: clamp(30px, 4vw, 50px); font-weight: 800; text-transform: uppercase; line-height: 1; }
+
+.sec-link { color: var(--acento); font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: gap .2s; }
+.sec-link:hover { gap: 12px; }
+.sec-link::after { content: '→'; }
+
+.servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--borde); }
+
+.servicio-item {
+  background: var(--negro2); padding: 28px 24px;
+  transition: background .2s; cursor: default;
+  border-top: 2px solid transparent; transition: all .2s;
+}
+.servicio-item:hover { background: var(--negro3); border-top-color: var(--acento); }
+
+.servicio-num { font-family: var(--display); font-size: 11px; font-weight: 700; color: var(--acento); letter-spacing: 2px; margin-bottom: 12px; }
+.servicio-nombre { font-family: var(--display); font-size: 20px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; letter-spacing: .5px; }
+.servicio-desc { font-size: 12px; color: var(--gris); line-height: 1.6; margin-bottom: 20px; }
+.servicio-precio { font-family: var(--display); font-size: 28px; font-weight: 700; color: var(--acento); }
+.servicio-precio span { font-family: var(--cuerpo); font-size: 12px; color: var(--gris); font-weight: 400; margin-left: 2px; }
+
+/* ── GALERÍA ── */
+.galeria { padding: 90px var(--pad); }
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 200px 200px;
+  gap: 8px; margin-top: 48px;
+}
+
+.galeria-item {
+  background: var(--negro2); border-radius: 6px; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px; cursor: pointer; transition: all .2s;
+  border: 1px solid var(--borde); position: relative;
+}
+
+.galeria-item:hover { border-color: var(--acento); transform: scale(0.98); }
+.galeria-item:hover .galeria-overlay { opacity: 1; }
+
+.galeria-item.grande { grid-column: span 2; }
+
+.galeria-overlay {
+  position: absolute; inset: 0; background: rgba(232,197,71,0.15);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity .2s;
+  font-size: 14px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--acento);
+}
+
+.galeria-bg { font-size: clamp(40px, 6vw, 72px); opacity: .15; }
+
+/* ── TURNOS ── */
+.turnos { display: grid; grid-template-columns: 1fr 1fr; background: var(--negro2); }
+
+.turnos-info {
+  padding: 90px var(--pad); background: var(--acento);
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.turnos-info .sec-titulo { color: var(--negro); }
+.turnos-info .sec-chip { color: var(--negro); }
+.turnos-info .sec-chip::before { background: var(--negro); }
+
+.turnos-desc { font-size: 14px; line-height: 1.7; color: rgba(0,0,0,0.6); margin: 16px 0 32px; max-width: 360px; }
+
+.turnos-lista { display: flex; flex-direction: column; gap: 10px; }
+.turno-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: var(--negro); }
+.turno-item::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--negro); flex-shrink: 0; }
+
+.turnos-form {
+  padding: 90px var(--pad);
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.form-titulo { font-family: var(--display); font-size: 28px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 28px; line-height: 1.1; }
+
+.form-grupo { margin-bottom: 14px; }
+.form-grupo label { display: block; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gris); margin-bottom: 7px; }
+.form-grupo input, .form-grupo select, .form-grupo textarea {
+  width: 100%; background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;
+  padding: 11px 14px; color: var(--blanco); font-family: var(--cuerpo);
+  font-size: 13px; outline: none; transition: border-color .2s; -webkit-appearance: none;
+}
+.form-grupo input:focus, .form-grupo select:focus { border-color: var(--acento); }
+.form-grupo select option { background: var(--negro2); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.btn-form {
+  width: 100%; background: var(--acento); color: var(--negro);
+  border: none; padding: 14px; border-radius: 4px; font-family: var(--cuerpo);
+  font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  cursor: pointer; margin-top: 6px; transition: background .2s;
+}
+.btn-form:hover { background: var(--acento2); }
+
+.whatsapp-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; background: #25d366; color: #fff;
+  border: none; padding: 13px; border-radius: 4px; font-family: var(--cuerpo);
+  font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  cursor: pointer; margin-top: 10px; text-decoration: none; transition: background .2s;
+}
+.whatsapp-btn:hover { background: #20bc5a; }
+
+/* ── CONTACTO ── */
+.contacto { padding: 90px var(--pad); }
+.contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px; align-items: start; }
+
+.contacto-datos { display: flex; flex-direction: column; gap: 14px; }
+.contacto-item {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--negro2); border: 1px solid var(--borde);
+  border-radius: 8px; padding: 16px; transition: border-color .2s;
+}
+.contacto-item:hover { border-color: var(--acento); }
+.c-icono { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.c-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gris); margin-bottom: 4px; }
+.c-valor { font-size: 13px; color: var(--blanco); font-weight: 500; }
+
+.mapa-placeholder {
+  background: var(--negro2); border: 1px solid var(--borde);
+  border-radius: 8px; height: 260px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 10px;
+  cursor: pointer; transition: border-color .2s;
+}
+.mapa-placeholder:hover { border-color: var(--acento); }
+.mapa-txt { font-size: 12px; color: var(--gris); font-weight: 500; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--negro2); border-top: 1px solid var(--borde);
+  padding: 52px var(--pad) 24px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+}
+.footer-logo { font-family: var(--display); font-size: 20px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+.footer-logo span { color: var(--acento); }
+.footer-desc { font-size: 12px; color: var(--gris); line-height: 1.6; max-width: 220px; }
+.footer-col-titulo { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 9px; }
+.footer-col ul li a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 12px; transition: color .2s; }
+.footer-col ul li a:hover { color: var(--blanco); }
+.footer-bottom { grid-column: 1/-1; border-top: 1px solid var(--borde); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.2); }
+.footer-credit { font-size: 11px; color: var(--acento); opacity: .5; }
+
+/* ── ANIMACIONES ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.hero-left { animation: fadeUp .7s ease both; }
+.hero-right { animation: fadeUp .7s ease .18s both; }
+
+/* ══════════════════
+   RESPONSIVE
+══════════════════ */
+@media (max-width: 960px) {
+  .servicios-grid { grid-template-columns: repeat(2, 1fr); }
+  .galeria-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 180px 180px 180px; }
+  .galeria-item.grande { grid-column: span 2; }
+  footer { grid-template-columns: 1fr 1fr; }
+  footer > div:first-child { grid-column: span 2; }
+  .footer-bottom { grid-column: span 2; }
+}
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 48px var(--pad) 40px; }
+  .hero-right { min-height: 280px; }
+  .hero-cards { flex-direction: row; flex-wrap: wrap; max-width: 100%; padding: 24px var(--pad); gap: 10px; }
+  .hero-card-stat { flex: 1; min-width: 130px; }
+  .hero-card-horario { width: 100%; }
+
+  .servicios-grid { grid-template-columns: 1fr; }
+
+  .galeria-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 150px 150px 150px; }
+  .galeria-item.grande { grid-column: span 2; }
+
+  .turnos { grid-template-columns: 1fr; }
+  .contacto-grid { grid-template-columns: 1fr; }
+
+  footer { grid-template-columns: 1fr; }
+  footer > div:first-child { grid-column: span 1; }
+  .footer-bottom { grid-column: span 1; flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .hero-titulo { font-size: 44px; }
+  .hero-btns { flex-direction: column; align-items: stretch; }
+  .btn-primary, .btn-outline { text-align: center; }
+  .form-row { grid-template-columns: 1fr; }
+  .galeria-grid { grid-template-columns: 1fr; grid-template-rows: repeat(5, 150px); }
+  .galeria-item.grande { grid-column: span 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Barber<span>Co</span></a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#galeria">Trabajos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#turnos" class="nav-cta">Reservar turno</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="#galeria" onclick="closeMenu()">Trabajos</a>
+  <a href="#contacto" onclick="closeMenu()">Contacto</a>
+  <a href="#turnos" onclick="closeMenu()">Reservar turno →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-linea">Reconquista, Santa Fe</div>
+    <h1 class="hero-titulo">
+      Tu mejor<br>
+      <span class="linea2">versión</span><br>
+      empieza acá
+    </h1>
+    <p class="hero-desc">Cortes de precisión, diseño de barba y tratamientos para el hombre urbano. Atención personalizada en cada visita.</p>
+    <div class="hero-btns">
+      <a href="#turnos" class="btn-primary">Reservar turno</a>
+      <a href="#servicios" class="btn-outline">Ver servicios</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-bg-txt">BARBER</div>
+    <div class="hero-cards">
+      <div class="hero-card-stat">
+        <div class="stat-icono">✂️</div>
+        <div>
+          <div class="stat-info-num">+500</div>
+          <div class="stat-info-lbl">Clientes</div>
+        </div>
+      </div>
+      <div class="hero-card-stat">
+        <div class="stat-icono">⭐</div>
+        <div>
+          <div class="stat-info-num">4.9</div>
+          <div class="stat-info-lbl">Calificación</div>
+        </div>
+      </div>
+      <div class="hero-card-horario">
+        <div>
+          <div class="horario-txt">Abierto hoy</div>
+          <div class="horario-val">9:00 — 20:00</div>
+        </div>
+        <div class="horario-dot"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="servicios" id="servicios">
+  <div class="sec-header">
+    <div>
+      <div class="sec-chip">Lo que hacemos</div>
+      <h2 class="sec-titulo">Servicios</h2>
+    </div>
+    <a href="#turnos" class="sec-link">Reservar</a>
+  </div>
+  <div class="servicios-grid">
+    <div class="servicio-item">
+      <div class="servicio-num">01</div>
+      <div class="servicio-nombre">Corte clásico</div>
+      <div class="servicio-desc">Corte tradicional con tijera o máquina. Incluye lavado y styling final.</div>
+      <div class="servicio-precio">$3.500 <span>ARS</span></div>
+    </div>
+    <div class="servicio-item">
+      <div class="servicio-num">02</div>
+      <div class="servicio-nombre">Corte + barba</div>
+      <div class="servicio-desc">Combo completo. Corte de pelo y diseño o perfilado de barba con navaja.</div>
+      <div class="servicio-precio">$5.500 <span>ARS</span></div>
+    </div>
+    <div class="servicio-item">
+      <div class="servicio-num">03</div>
+      <div class="servicio-nombre">Diseño de barba</div>
+      <div class="servicio-desc">Perfilado, delineado y terminación de barba. Con productos premium.</div>
+      <div class="servicio-precio">$2.500 <span>ARS</span></div>
+    </div>
+    <div class="servicio-item">
+      <div class="servicio-num">04</div>
+      <div class="servicio-nombre">Afeitado con navaja</div>
+      <div class="servicio-desc">Afeitado tradicional con toalla caliente, crema y navaja recta.</div>
+      <div class="servicio-precio">$3.000 <span>ARS</span></div>
+    </div>
+    <div class="servicio-item">
+      <div class="servicio-num">05</div>
+      <div class="servicio-nombre">Tratamiento capilar</div>
+      <div class="servicio-desc">Hidratación profunda, keratina o tratamiento anticaída según necesidad.</div>
+      <div class="servicio-precio">$4.000 <span>ARS</span></div>
+    </div>
+    <div class="servicio-item">
+      <div class="servicio-num">06</div>
+      <div class="servicio-nombre">Corte junior</div>
+      <div class="servicio-desc">Corte para niños hasta 12 años. Ambiente tranquilo y atención paciente.</div>
+      <div class="servicio-precio">$2.200 <span>ARS</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="galeria" id="galeria">
+  <div class="sec-header">
+    <div>
+      <div class="sec-chip">Nuestro trabajo</div>
+      <h2 class="sec-titulo">Trabajos recientes</h2>
+    </div>
+    <a href="https://instagram.com" class="sec-link">Ver Instagram</a>
+  </div>
+  <div class="galeria-grid">
+    <div class="galeria-item grande">
+      <div class="galeria-bg">✂️</div>
+      <div class="galeria-overlay">Ver trabajo</div>
+    </div>
+    <div class="galeria-item">
+      <div class="galeria-bg">💈</div>
+      <div class="galeria-overlay">Ver trabajo</div>
+    </div>
+    <div class="galeria-item">
+      <div class="galeria-bg">🪒</div>
+      <div class="galeria-overlay">Ver trabajo</div>
+    </div>
+    <div class="galeria-item grande">
+      <div class="galeria-bg">✂️</div>
+      <div class="galeria-overlay">Ver trabajo</div>
+    </div>
+  </div>
+</section>
+
+<!-- TURNOS -->
+<section class="turnos" id="turnos">
+  <div class="turnos-info">
+    <div class="sec-chip">Agendá</div>
+    <h2 class="sec-titulo">Reservá tu turno</h2>
+    <p class="turnos-desc">Elegí el día, el horario y el servicio. Te confirmamos el turno por WhatsApp en minutos.</p>
+    <div class="turnos-lista">
+      <div class="turno-item">Lunes a viernes de 9:00 a 20:00 hs</div>
+      <div class="turno-item">Sábados de 9:00 a 17:00 hs</div>
+      <div class="turno-item">Córdoba 320, Reconquista</div>
+      <div class="turno-item">Confirmación inmediata por WhatsApp</div>
+    </div>
+  </div>
+  <div class="turnos-form">
+    <div class="form-titulo">Tu próximo<br>corte</div>
+    <div id="form-error" style="display:none;background:#2a1a1a;border:1px solid #d63638;border-radius:4px;padding:10px 14px;font-size:12px;color:#f87171;margin-bottom:14px;">
+      ⚠️ Por favor completá nombre, servicio y fecha antes de continuar.
+    </div>
+    <div class="form-row">
+      <div class="form-grupo">
+        <label>Nombre</label>
+        <input id="turno-nombre" type="text" placeholder="Lucas">
+      </div>
+      <div class="form-grupo">
+        <label>Tu WhatsApp</label>
+        <input id="turno-telefono" type="tel" placeholder="3482 XXXXXX">
+      </div>
+    </div>
+    <div class="form-grupo">
+      <label>Servicio</label>
+      <select id="turno-servicio">
+        <option value="">Elegí un servicio</option>
+        <option>Corte clásico — $3.500</option>
+        <option>Corte + barba — $5.500</option>
+        <option>Diseño de barba — $2.500</option>
+        <option>Afeitado con navaja — $3.000</option>
+        <option>Tratamiento capilar — $4.000</option>
+        <option>Corte junior — $2.200</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-grupo">
+        <label>Fecha preferida</label>
+        <input id="turno-fecha" type="date">
+      </div>
+      <div class="form-grupo">
+        <label>Horario preferido</label>
+        <select id="turno-horario">
+          <option value="">Elegí horario</option>
+          <option>09:00</option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>12:00</option>
+          <option>14:00</option>
+          <option>15:00</option>
+          <option>16:00</option>
+          <option>17:00</option>
+          <option>18:00</option>
+          <option>19:00</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn-form" onclick="reservarWhatsApp()">Confirmar turno por WhatsApp</button>
+    <div style="text-align:center;font-size:11px;color:var(--gris);margin-top:10px;letter-spacing:.5px;">
+      Al confirmar se abre WhatsApp con tu reserva lista para enviar
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+  <div class="sec-header">
+    <div>
+      <div class="sec-chip">Encontranos</div>
+      <h2 class="sec-titulo">Dónde estamos</h2>
+    </div>
+  </div>
+  <div class="contacto-grid">
+    <div class="contacto-datos">
+      <div class="contacto-item">
+        <div class="c-icono">📍</div>
+        <div>
+          <div class="c-label">Dirección</div>
+          <div class="c-valor">Córdoba 320, Reconquista, Santa Fe</div>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <div class="c-icono">📱</div>
+        <div>
+          <div class="c-label">WhatsApp</div>
+          <div class="c-valor">+54 9 3482 45-XXXX</div>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <div class="c-icono">📸</div>
+        <div>
+          <div class="c-label">Instagram</div>
+          <div class="c-valor">@barberco.reconquista</div>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <div class="c-icono">🕐</div>
+        <div>
+          <div class="c-label">Horarios</div>
+          <div class="c-valor">Lun–Vie 9:00–20:00 · Sáb 9:00–17:00</div>
+        </div>
+      </div>
+    </div>
+    <div class="mapa-placeholder" onclick="this.innerHTML='<div style=\'text-align:center\'><div style=\'font-size:40px\'>📍</div><div style=\'font-size:13px;color:#e8c547;font-weight:600;margin-top:8px\'>Córdoba 320, Reconquista</div><div style=\'font-size:12px;color:#888;margin-top:4px\'>Clic para abrir en Google Maps</div></div>'">
+      <span style="font-size:40px">🗺️</span>
+      <span class="mapa-txt">Ver en Google Maps</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">Barber<span>Co</span></div>
+    <p class="footer-desc">Barbería urbana en el centro de Reconquista, Santa Fe. Cortes de precisión para el hombre moderno.</p>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Servicios</div>
+    <ul>
+      <li><a href="#">Corte clásico</a></li>
+      <li><a href="#">Corte + barba</a></li>
+      <li><a href="#">Afeitado navaja</a></li>
+      <li><a href="#">Tratamientos</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <div class="footer-col-titulo">Contacto</div>
+    <ul>
+      <li><a href="#">WhatsApp</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Google Maps</a></li>
+      <li><a href="#">Reservar turno</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 BarberCo Reconquista — Todos los derechos reservados</span>
+    <span class="footer-credit">Diseño web · Tu nombre acá</span>
+  </div>
+</footer>
+
+<script>
+  // ── MENÚ MÓVIL ──
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.querySelector('.hamburger');
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+
+  // ── RESERVA POR WHATSAPP ──
+  function reservarWhatsApp() {
+
+    // Número del negocio — acá va el número real del cliente
+    const NUMERO_NEGOCIO = '5493482XXXXXX';
+
+    // Leer los campos del formulario
+    const nombre   = document.getElementById('turno-nombre').value.trim();
+    const telefono = document.getElementById('turno-telefono').value.trim();
+    const servicio = document.getElementById('turno-servicio').value;
+    const fecha    = document.getElementById('turno-fecha').value;
+    const horario  = document.getElementById('turno-horario').value;
+
+    // Validar campos obligatorios
+    const error = document.getElementById('form-error');
+    if (!nombre || !servicio || !fecha) {
+      error.style.display = 'block';
+      setTimeout(() => error.style.display = 'none', 3500);
+      return;
+    }
+    error.style.display = 'none';
+
+    // Formatear la fecha de YYYY-MM-DD a DD/MM/YYYY
+    const [anio, mes, dia] = fecha.split('-');
+    const fechaFormateada = `${dia}/${mes}/${anio}`;
+
+    // Armar el mensaje con todos los datos
+    let mensaje = `Hola BarberCo! 👋 Quiero reservar un turno.\n\n`;
+    mensaje += `✂️ *Servicio:* ${servicio}\n`;
+    mensaje += `📅 *Fecha:* ${fechaFormateada}\n`;
+    if (horario) mensaje += `🕐 *Horario:* ${horario} hs\n`;
+    mensaje += `👤 *Nombre:* ${nombre}\n`;
+    if (telefono) mensaje += `📱 *Mi WhatsApp:* ${telefono}\n`;
+    mensaje += `\n¿Tienen disponibilidad? ¡Gracias!`;
+
+    // Codificar el mensaje para la URL y abrir WhatsApp
+    const url = `https://wa.me/${NUMERO_NEGOCIO}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  }
+</script>
+</body>
+</html>
