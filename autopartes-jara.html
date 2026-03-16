@@ -120,7 +120,6 @@ nav {
   position: relative; z-index: 1;
   display: flex; flex-direction: column; justify-content: center;
   padding: 60px var(--pad);
-  overflow: hidden;
 }
 
 .hero-chip {
@@ -134,10 +133,9 @@ nav {
 @keyframes pulso { 0%,100%{opacity:1} 50%{opacity:.3} }
 
 .hero-titulo {
-  font-family: var(--display); font-size: clamp(36px, 6vw, 84px);
+  font-family: var(--display); font-size: clamp(44px, 6vw, 84px);
   font-weight: 800; line-height: .95; text-transform: uppercase;
   letter-spacing: -1px; margin-bottom: 20px; color: var(--blanco);
-  word-break: break-word; overflow-wrap: break-word;
 }
 .hero-titulo .rojo { color: var(--rojo); display: block; }
 
@@ -371,7 +369,7 @@ footer { background: var(--negro); border-top: 3px solid var(--rojo); padding: 4
   .footer-bottom { grid-column: span 1; flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 480px) {
-  .hero-titulo { font-size: clamp(32px, 9vw, 42px); letter-spacing: -0.5px; }
+  .hero-titulo { font-size: 9vw; letter-spacing: -0.5px; word-break: break-word; }
   .hero-btns { flex-direction: column; }
   .btn-rojo, .btn-wsp-hero { text-align: center; justify-content: center; }
   .repuestos-grid { grid-template-columns: 1fr; }
