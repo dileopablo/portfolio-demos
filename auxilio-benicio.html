@@ -65,22 +65,11 @@ html { scroll-behavior: smooth; }
 body { background: var(--negro); color: var(--blanco); font-family: var(--cuerpo); overflow-x: hidden; }
 
 /* ── BARRA DE EMERGENCIA ── */
-.barra-emergencia {
-  background: var(--rojo); padding: 10px var(--pad);
-  display: flex; align-items: center; justify-content: center; gap: 16px;
-  flex-wrap: wrap;
-}
-.barra-emergencia-txt {
-  font-family: var(--display); font-size: 16px; letter-spacing: 2px;
-  color: #fff; text-transform: uppercase;
-}
-.barra-emergencia-num {
-  background: #fff; color: var(--rojo); font-family: var(--display);
-  font-size: 18px; letter-spacing: 2px; padding: 4px 16px; border-radius: 3px;
-  text-decoration: none; transition: all .2s; display: inline-block;
-}
-.barra-emergencia-num:hover { background: var(--amarillo); color: var(--negro); }
-.barra-pulso { width: 8px; height: 8px; border-radius: 50%; background: #fff; animation: pulso 1s infinite; flex-shrink: 0; }
+
+
+
+
+
 @keyframes pulso { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
 
 /* ── NAV ── */
@@ -464,19 +453,14 @@ footer {
   .btn-emergencia { width: 100%; justify-content: center; }
   .btn-wsp { width: 100%; justify-content: center; }
   .seccion { padding: 60px var(--pad); }
-  .barra-emergencia { flex-direction: column; gap: 8px; text-align: center; }
+  
 }
 </style>
 </head>
 <body>
 
 <!-- BARRA DE EMERGENCIA -->
-<div class="barra-emergencia">
-  <div class="barra-pulso"></div>
-  <div class="barra-emergencia-txt">🚨 ¿Necesitás auxilio ahora? Tocá para llamar directo</div>
-  <a href="tel:+5493731537517" class="barra-emergencia-num">📞 Llamar ahora</a>
-  <div class="barra-pulso"></div>
-</div>
+
 
 <!-- NAV -->
 <nav>
