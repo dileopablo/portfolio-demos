@@ -744,22 +744,25 @@ footer {
   <div class="contacto-left">
     <div class="sec-eyebrow">Hablemos</div>
     <h2 class="contacto-titulo">Empecemos tu <span class="grad">proyecto</span></h2>
-    <p class="contacto-desc">Escribime por WhatsApp o email y coordinamos una charla sin cargo para ver qué necesita tu negocio.</p>
+    <p class="contacto-desc">Escribime por WhatsApp y coordinamos una charla sin cargo para ver qué necesita tu negocio.</p>
     <div class="contacto-items">
-      <a href="https://wa.me/5493482257895" class="contacto-item" style="background:#25d366;border-color:#25d366">
-        <span class="c-icono">💬</span>
+      <a href="https://wa.me/5493482257895" class="contacto-item" 
+        style="background:#25d366;border-color:#25d366; display:flex; align-items:center; gap:12px; padding:14px;">
+
+        <span class="c-icono" style="display:flex; align-items:center;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24">
+          <path d="M20.52 3.48A11.82 11.82 0 0012.05 0C5.49 0 .16 5.33.16 11.89c0 2.09.55 4.13 1.6 5.94L0 24l6.33-1.65a11.83 11.83 0 005.72 1.45h.01c6.56 0 11.89-5.33 11.89-11.89a11.8 11.8 0 00-3.43-8.43zM12.06 21.3h-.01a9.42 9.42 0 01-4.8-1.32l-.34-.2-3.76.98 1-3.66-.22-.37a9.4 9.4 0 01-1.44-5.03C2.5 6.7 6.7 2.5 11.88 2.5c2.51 0 4.87.98 6.64 2.75a9.34 9.34 0 012.75 6.64c0 5.18-4.2 9.41-9.41 9.41zm5.17-7.04c-.28-.14-1.64-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.21-.6.07-.28-.14-1.18-.43-2.24-1.36-.83-.74-1.39-1.66-1.55-1.94-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.83-2.01-.22-.53-.44-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.28-.96.94-.96 2.29s.99 2.65 1.13 2.84c.14.18 1.96 3 4.75 4.2.66.28 1.17.45 1.57.58.66.21 1.26.18 1.73.11.53-.08 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.18-.53-.32z"/>
+          </svg>
+        </span>
+
         <div>
-          <div class="c-label" style="color:rgba(255,255,255,0.7)">WhatsApp</div>
-          <div class="c-valor">+54 9 3482 257895</div>
+          <div class="c-label" style="color:rgba(255,255,255,0.8); font-size:15px; font-weight:600;">
+          WhatsApp
+          </div>
         </div>
+
       </a>
-      <a href="/cdn-cgi/l/email-protection#dfafbebdb3b0f2b1beb7aabab39fb7b0abb2beb6b3f1bcb0b2" class="contacto-item">
-        <span class="c-icono">✉️</span>
-        <div>
-          <div class="c-label">Email</div>
-          <div class="c-valor"><span class="__cf_email__" data-cfemail="661607040a094b08070e13030a260e09120b070f0a4805090b">[email&#160;protected]</span></div>
-        </div>
-      </a>
+      
       <a href="https://github.com/dileopablo" target="_blank" class="contacto-item">
         <span class="c-icono">🐙</span>
         <div>
@@ -810,9 +813,7 @@ footer {
       <textarea id="c-msg" placeholder="Cualquier detalle que quieras compartir..."></textarea>
     </div>
     <button class="btn-form" onclick="enviarContacto()">Enviar por WhatsApp</button>
-    <a href="/cdn-cgi/l/email-protection#5a2a3b38363577343b322f3f361a32352e373b333674393537" class="btn-wsp" style="background:var(--negro3);border:1px solid var(--borde2);margin-top:10px;color:var(--blanco);text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:8px;font-size:13px;font-weight:600;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--a1)'" onmouseout="this.style.borderColor='var(--borde2)'">
-      ✉️ Enviar por email
-    </a>
+    
   </div>
 </section>
 
