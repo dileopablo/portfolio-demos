@@ -699,8 +699,40 @@ footer {
       </div>
       <div class="proyecto-body">
         <div class="proyecto-nombre">Auxilio Benicio</div>
-        <div class="proyecto-desc">Servicio de auxilio en ruta con botón de emergencia animado, zona de cobertura, trabajos realizados y FAQ interactivo.</div>
+        <div class="proyecto-desc">Servicio de auxilio en ruta con botón de llamada directa, fotos reales de trabajos, mapa de cobertura y FAQ interactivo. Las Breñas, Chaco.</div>
         <a href="auxilio-benicio.html" class="proyecto-link">Ver demo</a>
+      </div>
+    </div>
+
+    <div class="proyecto-card">
+      <div class="proyecto-header">
+        <span class="proyecto-icono">🏗️</span>
+        <div class="proyecto-tags">
+          <span class="ptag" style="background:rgba(99,102,241,0.15);color:#a5b4fc">HTML</span>
+          <span class="ptag" style="background:rgba(245,158,11,0.15);color:#fcd34d">Mapa real</span>
+          <span class="ptag" style="background:rgba(6,182,212,0.15);color:#67e8f9">SEO</span>
+        </div>
+      </div>
+      <div class="proyecto-body">
+        <div class="proyecto-nombre">ServiHouse</div>
+        <div class="proyecto-desc">Construcción e instalaciones en Córdoba Capital. Gas, electricidad, sanitaria y calefacción. Con mapa real de Google Maps y formulario de presupuesto.</div>
+        <a href="servihouse.html" class="proyecto-link">Ver demo</a>
+      </div>
+    </div>
+
+    <div class="proyecto-card">
+      <div class="proyecto-header">
+        <span class="proyecto-icono">🔩</span>
+        <div class="proyecto-tags">
+          <span class="ptag" style="background:rgba(239,68,68,0.15);color:#fca5a5">Catálogo</span>
+          <span class="ptag" style="background:rgba(16,185,129,0.15);color:#6ee7b7">Buscador</span>
+          <span class="ptag" style="background:rgba(99,102,241,0.15);color:#a5b4fc">WhatsApp</span>
+        </div>
+      </div>
+      <div class="proyecto-body">
+        <div class="proyecto-nombre">AutoPartes Jara</div>
+        <div class="proyecto-desc">Tienda de repuestos usados y nuevos con catálogo real, buscador con filtros por categoría y botón de WhatsApp por cada repuesto. Las Breñas, Chaco.</div>
+        <a href="autopartes-jara.html" class="proyecto-link">Ver demo</a>
       </div>
     </div>
 
@@ -721,11 +753,11 @@ footer {
           <div class="c-valor">+54 9 3482 257895</div>
         </div>
       </a>
-      <a href="mailto:pablo-nahuel@hotmail.com" class="contacto-item">
+      <a href="/cdn-cgi/l/email-protection#dfafbebdb3b0f2b1beb7aabab39fb7b0abb2beb6b3f1bcb0b2" class="contacto-item">
         <span class="c-icono">✉️</span>
         <div>
           <div class="c-label">Email</div>
-          <div class="c-valor">pablo-nahuel@hotmail.com</div>
+          <div class="c-valor"><span class="__cf_email__" data-cfemail="661607040a094b08070e13030a260e09120b070f0a4805090b">[email&#160;protected]</span></div>
         </div>
       </a>
       <a href="https://github.com/dileopablo" target="_blank" class="contacto-item">
@@ -778,7 +810,7 @@ footer {
       <textarea id="c-msg" placeholder="Cualquier detalle que quieras compartir..."></textarea>
     </div>
     <button class="btn-form" onclick="enviarContacto()">Enviar por WhatsApp</button>
-    <a href="mailto:pablo-nahuel@hotmail.com" class="btn-wsp" style="background:var(--negro3);border:1px solid var(--borde2);margin-top:10px;color:var(--blanco);text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:8px;font-size:13px;font-weight:600;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--a1)'" onmouseout="this.style.borderColor='var(--borde2)'">
+    <a href="/cdn-cgi/l/email-protection#5a2a3b38363577343b322f3f361a32352e373b333674393537" class="btn-wsp" style="background:var(--negro3);border:1px solid var(--borde2);margin-top:10px;color:var(--blanco);text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:8px;font-size:13px;font-weight:600;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--a1)'" onmouseout="this.style.borderColor='var(--borde2)'">
       ✉️ Enviar por email
     </a>
   </div>
@@ -791,11 +823,11 @@ footer {
   <div class="footer-links">
     <a href="https://github.com/dileopablo" target="_blank">GitHub</a>
     <a href="https://dileopablo.github.io/CV_Pablo/" target="_blank">CV Online</a>
-    <a href="mailto:pablo-nahuel@hotmail.com">Email</a>
+    <a href="/cdn-cgi/l/email-protection#aadacbc8c6c587c4cbc2dfcfc6eac2c5dec7cbc3c684c9c5c7">Email</a>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
   }
@@ -820,13 +852,4 @@ footer {
     let txt = `Hola Pablo! 👋 Te contacto por tu servicio de desarrollo web.\n\n`;
     if (nombre)   txt += `👤 *Nombre:* ${nombre}\n`;
     if (tel)      txt += `📱 *WhatsApp:* ${tel}\n`;
-    if (negocio)  txt += `🏢 *Negocio:* ${negocio}\n`;
-    if (servicio) txt += `💻 *Necesito:* ${servicio}\n`;
-    if (msg)      txt += `📋 *Detalle:* ${msg}\n`;
-    txt += `\n¿Podemos coordinar una charla? ¡Gracias!`;
-
-    window.open(`https://wa.me/5493482257895?text=${encodeURIComponent(txt)}`, '_blank');
-  }
-</script>
-</body>
-</html>
+  
