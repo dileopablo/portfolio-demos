@@ -827,17 +827,21 @@ footer {
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+<script>
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
   }
+
   function closeMenu() {
     document.getElementById('mobileMenu').classList.remove('open');
   }
+
   document.addEventListener('click', function(e) {
     const menu = document.getElementById('mobileMenu');
     const btn = document.querySelector('.hamburger');
-    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+    if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
       menu.classList.remove('open');
     }
   });
@@ -850,6 +854,17 @@ footer {
     const msg      = document.getElementById('c-msg').value.trim();
 
     let txt = `Hola Pablo! 👋 Te contacto por tu servicio de desarrollo web.\n\n`;
+
     if (nombre)   txt += `👤 *Nombre:* ${nombre}\n`;
     if (tel)      txt += `📱 *WhatsApp:* ${tel}\n`;
-  
+    if (negocio)  txt += `🏢 *Negocio:* ${negocio}\n`;
+    if (servicio) txt += `💼 *Servicio:* ${servicio}\n`;
+    if (msg)      txt += `📝 *Mensaje:* ${msg}\n`;
+
+    const url = `https://wa.me/5493482257895?text=${encodeURIComponent(txt)}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
